@@ -1,6 +1,6 @@
 .embla {
     width: 100%; /* Full width */
-    height: 70vh; /* 70% of the viewport height */
+    height: 70%; /* 70% of the viewport height */
     border: solid 2px red;
 }
 
@@ -9,7 +9,7 @@
     flex-direction: row;
     gap: 10px;
     border: solid 2px yellow;
-    width: 100%;
+    width: auto;
     height: 100%; /* Match the height of the parent */
 }
 
@@ -17,10 +17,18 @@
     position: relative;
     flex: 0 0 auto;
     border: solid 2px #fff;
-    width: calc(70vh * 16 / 9); /* Maintain a 16:9 aspect ratio */
+    width: 80%;
     height: 100%; /* Match the height of the parent */
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
+}
+
+.embla__slide img,
+.embla__slide video {
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+    display: block;
 }
