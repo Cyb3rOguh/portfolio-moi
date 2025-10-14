@@ -1,15 +1,22 @@
+.embla {
+    width: auto;
+    height: 70%;
+    border: solid 2px red;
+}
+
 .embla__container {
     display: flex;
     flex-direction: row;
     gap: 10px;
-    border: solid 2px yellow;
+    border: solid 2px yellow;;
+    height: 100%;
 }
 .embla__slide {
     position: relative;
     flex: 0 0 auto;
     border: solid 2px #fff;
     width: 100%;
-    height: 100px;
+    ;
     display: flex;
     justify-content: center;
     align-items: center;
