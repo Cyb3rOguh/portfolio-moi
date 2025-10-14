@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
+import './video.css';
 
 const EmblaCarousel = () => {
     const [emblaRef, emblaApi] = useEmblaCarousel();
