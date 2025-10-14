@@ -1,15 +1,25 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
+import useEmblaCarousel from 'embla-carousel-react';
 
-const ShrekImage = () => {
+const EmblaCarousel = () => {
+    const [emblaRef, emblaApi] = useEmblaCarousel();
+
+    useEffect(() => {
+        if (emblaApi) {
+            // Embla API is ready
+            console.log(emblaApi);
+        }
+    }, [emblaApi]);
+
     return (
-        <div>
-            <img 
-                src="/shrek.webp" 
-                alt="Shrek" 
-                style={{ maxWidth: '100%', height: 'auto' }} 
-            />
+        <div className="embla" ref={emblaRef}>
+            <div className="embla__container">
+                <div className="embla__slide">Slide 1</div>
+                <div className="embla__slide">Slide 2</div>
+                <div className="embla__slide">Slide 3</div>
+            </div>
         </div>
     );
 };
 
-export default ShrekImage;
+export default EmblaCarousel;
