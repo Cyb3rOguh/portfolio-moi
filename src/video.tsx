@@ -18,7 +18,14 @@ const EmblaCarousel = () => {
         <div className="embla" ref={emblaRef}>
             <div className="embla__container">
                 <div className="embla__slide">Slide 1</div>
-                <div className="embla__slide">Slide 2</div>
+                
+                //slide 2 nouvelle couleur
+                <div className="embla__slide"> 
+                    <video className="embla__video" controls>
+                        <source src="/videos/nouvellecouleur.mov" type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
                 <div className="embla__slide">Slide 3</div>
             </div>
         </div>
