@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import Musique from "./musique.tsx";
+import Video from "./video.tsx";
 
 function App() {
   const [activeSide, setActiveSide] = useState("musique");
@@ -14,6 +15,7 @@ function App() {
 
       <div className="App">
         {activeSide === "musique" && <Musique />}
+        {activeSide === "video" && <Video />}
       </div>
 
       {/*le menu*/}
