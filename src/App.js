@@ -6,11 +6,17 @@ function App() {
 
   return (
     <>
+      {/*mon nom en haut de la page*/}
       <header style={{ position: "fixed", top: 0, width: "100%", textAlign: "center", backgroundColor: "#fff", zIndex: 1 }}>
         <h1>Hugo Borel</h1>
       </header>
-      <div className="App" style={{ paddingTop: "60px" }}>
-        <div className="toggle-container" style={{ display: "flex", position: "relative", width: "200px", background: "#ddd", borderRadius: "25px", cursor: "pointer" }}>
+
+      <div className="App">
+      </div>
+
+      {/*le menu*/}
+      <footer style={{ position: "fixed", bottom: "20px", width: "100%", textAlign: "center" }}>
+        <div className="toggle-container" style={{ display: "inline-flex", position: "relative", width: "200px", background: "#ddd", borderRadius: "25px", cursor: "pointer" }}>
           <div
             className="toggle-thumb"
             style={{
@@ -53,7 +59,7 @@ function App() {
             Vidéo
           </div>
         </div>
-      </div>
+      </footer>
     </>
   );
 }
