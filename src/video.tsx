@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import './video.css';
 
@@ -17,16 +17,30 @@ const EmblaCarousel = () => {
     return (
         <div className="embla" ref={emblaRef}>
             <div className="embla__container">
-                <div className="embla__slide">Slide 1</div>
                 
-                //slide 2 nouvelle couleur
+                {/* gagner */}
                 <div className="embla__slide"> 
-                    <video className="embla__video" controls>
-                        <source src="/videos/nouvellecouleur.mov" type="video/mp4" />
+                    <video className="embla__video" autoPlay muted loop>
+                        <source src="/videos/gagner.mp4" type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
                 </div>
-                <div className="embla__slide">Slide 3</div>
+                
+                {/* nouvelle couleur */}
+                <div className="embla__slide"> 
+                    <video className="embla__video" autoPlay muted loop>
+                        <source src="/videos/nouvellecouleur.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+                {/* oignon */}
+                <div className="embla__slide"> 
+                    <video className="embla__video" autoPlay muted loop>
+                        <source src="/videos/oignon.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
             </div>
         </div>
     );
