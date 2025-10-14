@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
+import Musique from "./musique.tsx";
 
 function App() {
   const [activeSide, setActiveSide] = useState("musique");
@@ -12,6 +13,7 @@ function App() {
       </header>
 
       <div className="App">
+        {activeSide === "musique" && <Musique />}
       </div>
 
       {/*le menu*/}
