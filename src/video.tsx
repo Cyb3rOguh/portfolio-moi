@@ -2,8 +2,10 @@ import React, { useEffect, useRef } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import './video.css';
 
+import Autoplay from 'embla-carousel-autoplay'; //import de la fonction autoplay de embla-carousel
+
 const EmblaCarousel = () => {
-    const [emblaRef, emblaApi] = useEmblaCarousel();
+    const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay()]);
 
     useEffect(() => {
         if (emblaApi) {
