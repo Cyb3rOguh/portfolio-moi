@@ -5,7 +5,7 @@ const ToggleSwitch = ({ activeSide, setActiveSide }) => (
   <div className="toggle-container">
     <div
       className="toggle-thumb"
-      style={{ left: activeSide === "musique" ? "2px" : "102px" }}
+      style={{ left: activeSide === "musique" ? "2px" : "150px" }} /* Controle l'animation de combien ça glisse */
     />
     <div
       className={`toggle-option ${activeSide === "musique" ? "active" : ""}`}

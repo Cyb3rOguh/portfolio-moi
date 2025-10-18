@@ -8,18 +8,20 @@
   .toggle-container {
     display: inline-flex;
     position: relative;
-    width: 200px;
-    background: white;
+    width: 300px;
+    height: 44px;
+    background: #EAEFD3;
     border-radius: 25px;
     cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
   }
   
   .toggle-thumb {
     position: absolute;
     top: 2px;
-    width: 96px;
-    height: 36px;
-    background: #4caf50;
+    width: 148px;
+    height: 40px;
+    background: #5C8001;
     border-radius: 25px;
     transition: left 0.3s;
   }
