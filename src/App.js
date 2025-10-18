@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-      /*mon nom en haut de la page*/}
+      {/*mon nom en haut de la page*/}
         <header style={{ position: "fixed", top: 0, width: "100%", textAlign: "center", zIndex: 1, color: "white" }}>
           <h1>Hugo Borel</h1>
         </header>

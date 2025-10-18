@@ -5,9 +5,13 @@ import './musique.css'; // Add custom styles for the carousel
 
 const MusiqueCarousel = () => {
     const [emblaRef] = useEmblaCarousel(
-        { loop: true },
+        {
+          loop: true,
+          align: 'center',      // Centers slides, improving spacing visually
+          containScroll: 'trimSnaps' // Prevents overflow alignment issues
+        },
         [Autoplay({ delay: 3000 })]
-    );
+      );
 
     return (
         <div className="embla-musique" ref={emblaRef}>
