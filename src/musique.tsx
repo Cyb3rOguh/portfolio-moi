@@ -9,14 +9,20 @@ const MusiqueCarousel = () => {
         <div className="embla-musique" ref={emblaRef}>
 
             <div className="embla-musique__container">
+                
                 <div className="embla-musique__slide">
-                <img src="/zebre.webp" alt="Zebre" />
+                    <img src="/covers/bb.webp" alt="Zebre" />
                 </div>
+                
                 <div className="embla-musique__slide">
-                <img src="/another-image.webp" alt="Another" />
+                    <img src="/covers/couleur.webp" alt="Another" />
                 </div>
-            </div>
 
+                <div className="embla-musique__slide">
+                    <img src="/covers/gagner.webp" alt="Another" />
+                </div>
+
+            </div>            
         </div>
             
     );
