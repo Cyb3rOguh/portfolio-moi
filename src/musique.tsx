@@ -3,7 +3,7 @@ import useEmblaCarousel from 'embla-carousel-react';
 import './musique.css'; // Add custom styles for the carousel
 
 const MusiqueCarousel = () => {
-    const [emblaRef] = useEmblaCarousel();
+    const [emblaRef] = useEmblaCarousel({ loop: true });
 
     return (
         <div className="embla-musique" ref={emblaRef}>
