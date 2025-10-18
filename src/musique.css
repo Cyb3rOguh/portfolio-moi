@@ -1,0 +1,22 @@
+.embla-musique__container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    border: 1px solid red;
+  }
+  
+  .embla-musique__slide {
+    flex: 0 0 auto;
+    width: 70%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+  }
+  
+  .embla-musique__slide img {
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
+  }

@@ -1,15 +1,25 @@
 import React from 'react';
+import useEmblaCarousel from 'embla-carousel-react';
+import './musique.css'; // Add custom styles for the carousel
 
-const ZebreImage = () => {
+const MusiqueCarousel = () => {
+    const [emblaRef] = useEmblaCarousel();
+
     return (
-        <div>
-            <img 
-                src="/zebre.webp" 
-                alt="Zebre" 
-                style={{ maxWidth: '100%', height: 'auto' }} 
-            />
+        <div className="embla-musique" ref={emblaRef}>
+
+            <div className="embla-musique__container">
+                <div className="embla-musique__slide">
+                <img src="/zebre.webp" alt="Zebre" />
+                </div>
+                <div className="embla-musique__slide">
+                <img src="/another-image.webp" alt="Another" />
+                </div>
+            </div>
+
         </div>
+            
     );
 };
 
-export default ZebreImage;
+export default MusiqueCarousel;
