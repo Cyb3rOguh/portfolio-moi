@@ -1,9 +1,13 @@
 import React from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
+import Autoplay from 'embla-carousel-autoplay';
 import './musique.css'; // Add custom styles for the carousel
 
 const MusiqueCarousel = () => {
-    const [emblaRef] = useEmblaCarousel({ loop: true });
+    const [emblaRef] = useEmblaCarousel(
+        { loop: true },
+        [Autoplay({ delay: 3000 })]
+    );
 
     return (
         <div className="embla-musique" ref={emblaRef}>
