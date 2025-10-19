@@ -10,7 +10,7 @@ const MusiqueCarousel = () => {
           align: 'center',      // Centers slides, improving spacing visually
           containScroll: 'trimSnaps' // Prevents overflow alignment issues
         },
-        [Autoplay({ delay: 3000 })]
+        [Autoplay({ delay: 3000, stopOnMouseEnter: true, stopOnInteraction: false })]
       );
 
     return (
