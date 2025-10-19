@@ -14,7 +14,20 @@
     /* Let each slide size itself to its content */
     flex: 0 0 auto;
     min-width: 0;
-    max-width: 100%;
+    
+    max-height: 620px;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    border: 1px solid white;
+  }
+
+  .embla__slide:hover {
+    opacity: 1;
+  }
+
+  .embla__slide:hover ~ .embla__slide,
+  .embla__slide:not(:hover) {
+    opacity: 1;
   }
   
   .embla__slide video {
