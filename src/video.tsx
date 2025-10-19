@@ -4,11 +4,11 @@ import Autoplay from 'embla-carousel-autoplay';
 import './video.css'; // Add custom styles for the carousel
 
 const slides = [
-  { src: '/videos/gagner.mp4' },
-  { src: '/videos/nouvellecouleur.mp4' },
-  { src: '/videos/oignon.mp4' },
-  { src: '/videos/rodman.mp4' },
-  { src: '/videos/gentil.mp4' },
+  { src: '/videos/gagner.mp4', title: "gagner c'est bien perdre ca craint", year: "2025" },
+  { src: '/videos/nouvellecouleur.mp4', title: 'Nouvelle Couleur', year: "2024" },
+  { src: '/videos/oignon.mp4', title: 'Oignon', year: "2023" },
+  { src: '/videos/rodman.mp4', title: 'Rodman', year: "2022" },
+  { src: '/videos/gentil.mp4', title: 'Gentil', year: "2021" },
 ];
 
 const VideoCarousel: React.FC = () => {
@@ -37,6 +37,10 @@ const VideoCarousel: React.FC = () => {
               playsInline
               autoPlay
             />
+            <div className="slide-info">
+              <span className="slide-title">{slide.title}</span>
+              <span className="slide-year">{slide.year}</span>
+            </div>
           </div>
         ))}
       </div>

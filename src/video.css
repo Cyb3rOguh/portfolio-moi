@@ -15,7 +15,6 @@
     flex: 0 0 auto;
     min-width: 0;
     max-height: 620px;
-    border: 1px solid white;
     opacity: 1;
     transition: opacity 0.3s ease;
   }
@@ -33,3 +32,27 @@
     outline: none;
     border-radius: 16px;
   }
+
+  .slide-title {
+    opacity: 0;
+    color: #102542;
+    font-size: 1.1rem;
+    margin: 0;
+    align-self: flex-start;
+    transition: opacity 0.3s ease;
+  }
+  
+  .slide-year {
+    opacity: 0;
+    color: #102542;
+    font-size: 1rem;
+    margin: 0;
+    align-self: flex-end;
+  }
+
+  .embla__slide:hover .slide-title,
+  .embla__slide:hover .slide-year {
+    opacity: 1;
+  }
+  
+  
