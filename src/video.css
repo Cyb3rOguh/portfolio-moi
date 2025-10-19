@@ -6,8 +6,6 @@
   .embla__container {
     display: flex;
     user-select: none;
-    -webkit-touch-callout: none;
-    -webkit-tap-highlight-color: transparent;
     gap: 10%; /* Increased gap to add more space between slides */
     padding: 0 120px; /* adds space before first and after last */
   }
@@ -17,7 +15,6 @@
     flex: 0 0 auto;
     min-width: 0;
     max-width: 100%;
-    border: 1px solid #ccc;
   }
   
   .embla__slide video {

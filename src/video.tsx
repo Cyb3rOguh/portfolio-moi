@@ -18,7 +18,7 @@ const VideoCarousel: React.FC = () => {
       align: 'center',
       containScroll: 'trimSnaps',
     },
-    [Autoplay({ delay: 3000, stopOnMouseEnter: true, stopOnInteraction: true })]
+    [Autoplay({ delay: 4000, stopOnMouseEnter: true, stopOnInteraction: true })]
   );
 
   return (
@@ -35,6 +35,7 @@ const VideoCarousel: React.FC = () => {
               muted
               loop
               playsInline
+              autoPlay
             />
           </div>
         ))}
