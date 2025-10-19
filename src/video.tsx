@@ -17,19 +17,31 @@ const VideoCarousel: React.FC = () => {
             muted
             loop
             playsInline
-            style={{ width: '100%', height: 'auto', borderRadius: '10px' }}
+            style={{ width: '100%', height: 'auto' }}
           />
         </div>
 
         {/*nouvelle couleur*/}
-        <div className="embla__slide" style={{ width: '370px' }}>
+        <div className="embla__slide" style={{ width: '380px' }}>
           <video
             src="/videos/nouvellecouleur.mp4"
             controls
             muted
             loop
             playsInline
-            style={{ width: '100%', height: 'auto', borderRadius: '10px' }}
+            style={{ width: '100%', height: 'auto' }}
+          />
+        </div>
+
+        {/*oignon*/}
+        <div className="embla__slide" style={{ width: '450px' }}>
+          <video
+            src="/videos/oignon.mp4"
+            controls
+            muted
+            loop
+            playsInline
+            style={{ width: '100%', height: 'auto' }}
           />
         </div>
         
@@ -41,7 +53,7 @@ const VideoCarousel: React.FC = () => {
             muted
             loop
             playsInline
-            style={{ width: 'auto', height: '100%', borderRadius: '10px' }}
+            style={{ width: 'auto', height: '100%' }}
           />
         </div>
 
