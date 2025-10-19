@@ -18,7 +18,7 @@ const VideoCarousel: React.FC = () => {
       align: 'center',
       containScroll: 'trimSnaps',
     },
-    [Autoplay({ delay: 4000, stopOnMouseEnter: true, stopOnInteraction: true })]
+    [Autoplay({ delay: 4000, stopOnMouseEnter: true, stopOnInteraction: false })]
   );
 
   return (
