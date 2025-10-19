@@ -1,17 +1,25 @@
 import React from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
+import Autoplay from 'embla-carousel-autoplay';
 import './video.css'; // Add custom styles for the carousel
 
 const slides = [
   { src: '/videos/gagner.mp4' },
-  { src: '/videos/nouvellecouleur.mp4', width: '860px' },
-  { src: '/videos/oignon.mp4', width: '450px' },
-  { src: '/videos/rodman.mp4', width: '450px' },
-  { src: '/videos/gentil.mp4', width: '140px', videoStyle: { width: 'auto', height: '100%' } },
+  { src: '/videos/nouvellecouleur.mp4' },
+  { src: '/videos/oignon.mp4' },
+  { src: '/videos/rodman.mp4' },
+  { src: '/videos/gentil.mp4' },
 ];
 
 const VideoCarousel: React.FC = () => {
-  const [emblaRef] = useEmblaCarousel({ containScroll: 'trimSnaps', align: 'start', dragFree: true, slidesToScroll: 'auto' });
+  const [emblaRef] = useEmblaCarousel(
+    {
+      loop: true,
+      align: 'center',
+      containScroll: 'trimSnaps',
+    },
+    [Autoplay({ delay: 3000, stopOnMouseEnter: true, stopOnInteraction: true })]
+  );
 
   return (
     <div className="embla" ref={emblaRef}>
@@ -20,7 +28,6 @@ const VideoCarousel: React.FC = () => {
           <div
             className="embla__slide"
             key={index}
-            style={slide.width ? { width: slide.width } : undefined}
           >
             <video
               src={slide.src}
@@ -28,7 +35,6 @@ const VideoCarousel: React.FC = () => {
               muted
               loop
               playsInline
-              style={slide.videoStyle ? slide.videoStyle : undefined}
             />
           </div>
         ))}

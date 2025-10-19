@@ -3,7 +3,6 @@
     flex-direction: row;
     gap: 10px;
     gap: 120px; /* Increased gap to add more space between slides */
-    
     padding: 0 120px; /* adds space before first and after last */
   }
 
