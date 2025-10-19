@@ -21,6 +21,7 @@
   .embla__slide video {
     display: block;
     max-width: 100%;        /* Ensure video doesn’t exceed viewport width */
+    max-height: 600px;
     pointer-events: none;   /* Allow dragging carousel over the video [oai_citation:12‡dev.to](https://dev.to/siaust/make-your-own-html-carousel-in-react-177k#:~:text=dragging%20of%20the%20card%2C%20we,you%20want%20or%20need%20to) */
     user-select: none;
     outline: none;
