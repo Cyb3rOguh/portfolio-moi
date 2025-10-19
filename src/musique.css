@@ -68,3 +68,11 @@
     aspect-ratio: 1 / 1;
   }
 }
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .embla-musique__slide {
+    height: 50px;
+    aspect-ratio: 1 / 1;
+  }
+}
+
