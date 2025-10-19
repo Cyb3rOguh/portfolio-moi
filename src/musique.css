@@ -37,7 +37,8 @@
   opacity: 0;
   text-align: center;
   margin-top: 4px;
-  
+  text-align: left;
+  align-self: flex-start;
   /* Optional: font-size, color, etc. */
 }
 
