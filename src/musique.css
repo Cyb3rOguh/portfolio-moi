@@ -13,6 +13,7 @@
     height: 70%;
     max-width: 700px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     transition: opacity 0.5s ease;
@@ -29,3 +30,17 @@
   .embla-musique__container:hover .embla-musique__slide:not(:hover) {
     opacity: 0.5;
   }
+
+
+/* Slide title styles */
+.slide-title {
+  opacity: 0;
+  text-align: center;
+  margin-top: 4px;
+  
+  /* Optional: font-size, color, etc. */
+}
+
+.embla-musique__slide:hover .slide-title {
+  opacity: 1;
+}

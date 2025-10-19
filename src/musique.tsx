@@ -20,30 +20,37 @@ const MusiqueCarousel = () => {
                 
                 <div className="embla-musique__slide">
                     <img src="/covers/bb.webp" alt="Zebre" />
+                    <span className="slide-title">Zebre</span>
                 </div>
                 
                 <div className="embla-musique__slide">
                     <img src="/covers/couleur.webp" alt="Another" />
+                    <span className="slide-title">Couleur</span>
                 </div>
 
                 <div className="embla-musique__slide">
                     <img src="/covers/gagner.webp" alt="Another" />
+                    <span className="slide-title">Gagner</span>
                 </div>
 
                 <div className="embla-musique__slide">
                     <img src="/covers/oignon.webp" alt="Another" />
+                    <span className="slide-title">Oignon</span>
                 </div>
 
                 <div className="embla-musique__slide">
                     <img src="/covers/pandore.webp" alt="Another" />
+                    <span className="slide-title">Pandore</span>
                 </div>
 
                 <div className="embla-musique__slide">
                     <img src="/covers/morceau.webp" alt="Another" />
+                    <span className="slide-title">Morceau</span>
                 </div>
 
                 <div className="embla-musique__slide">
                     <img src="/covers/saturn.webp" alt="Another" />
+                    <span className="slide-title">Saturn</span>
                 </div>
 
             </div>            
