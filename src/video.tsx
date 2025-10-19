@@ -5,7 +5,18 @@ import './video.css';
 import Autoplay from 'embla-carousel-autoplay'; //import de la fonction autoplay de embla-carousel
 
 const EmblaCarousel = () => {
-    const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay()]);
+    const [emblaRef, emblaApi] = useEmblaCarousel(
+        {
+            loop: true,
+            axis: 'x',
+            containScroll: 'trimSnaps',
+            skipSnaps: false,
+            slidesToScroll: 'auto',
+            align: 'start',
+            dragFree: true,
+        },
+        [Autoplay()]
+    );
 
     useEffect(() => {
         if (emblaApi) {
@@ -19,7 +30,7 @@ const EmblaCarousel = () => {
             <div className="embla__container">
             
                 {/* gagner */}
-                <div className="embla__slide"> 
+                <div className="embla__slide">
                     <a href="https://youtu.be/Ac3oQSA2Gv0" target="_blank" rel="noopener noreferrer">
                         <video
                         className="embla__video"
@@ -49,7 +60,7 @@ const EmblaCarousel = () => {
                 </div>
 
                 {/* oignon */}
-                <div className="embla__slide"> 
+                <div className="embla__slide">
                     <a href="https://youtu.be/yKNas4OvNgI?si=VoU3Pkg3AmjCVm6B" target="_blank" rel="noopener noreferrer">
                         <video
                         className="embla__video"

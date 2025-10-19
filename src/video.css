@@ -1,6 +1,5 @@
 .embla {
     width: 100%; /* Full width */
-    height: 70%; /* 70% of the viewport height */
     border: solid 2px red;
 }
 
@@ -17,18 +16,23 @@
     position: relative;
     flex: 0 0 auto;
     border: solid 2px #fff;
-    width: 80%;
-    height: 100%; /* Match the height of the parent */
+    height: auto; /* Adapt to the video or image height */
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
 }
 
+.slide-width {
+    width: auto; /* Allows custom widths on individual slides */
+}
+
 .embla__slide img,
 .embla__slide video {
     width: auto;
-    height: 100%;
+    height: auto;
+    max-height: 100%;
+    max-width: 100%;
     object-fit: contain;
     display: block;
 }
