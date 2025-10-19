@@ -6,7 +6,7 @@
   .embla__container {
     display: flex;
     user-select: none;
-    gap: 10%; /* Increased gap to add more space between slides */
+    gap: 120px; /* Increased gap to add more space between slides */
     padding: 0 120px; /* adds space before first and after last */
   }
   
@@ -14,20 +14,14 @@
     /* Let each slide size itself to its content */
     flex: 0 0 auto;
     min-width: 0;
-    
     max-height: 620px;
+    border: 1px solid white;
     opacity: 1;
     transition: opacity 0.3s ease;
-    border: 1px solid white;
   }
 
-  .embla__slide:hover {
-    opacity: 1;
-  }
-
-  .embla__slide:hover ~ .embla__slide,
-  .embla__slide:not(:hover) {
-    opacity: 1;
+  .embla__container:hover .embla__slide:not(:hover) {
+    opacity: 0.5;
   }
   
   .embla__slide video {
