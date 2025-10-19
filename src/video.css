@@ -23,6 +23,11 @@
     overflow: hidden;
 }
 
+.embla__slide:nth-child(5) {
+    width: 32.2%;
+    height: auto;
+}
+
 .slide-width {
     width: auto; /* Allows custom widths on individual slides */
 }
