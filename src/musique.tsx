@@ -20,37 +20,58 @@ const MusiqueCarousel = () => {
                 
                 <div className="embla-musique__slide">
                     <img src="/covers/bb.webp" alt="Zebre" />
-                    <span className="slide-title">Bébé/Album/2025</span>
+                    <div className="slide-info">
+                      <span className="slide-title">Bebe/Album/10 titres</span>
+                      <span className="slide-year">2025</span>
+                    </div>
                 </div>
                 
                 <div className="embla-musique__slide">
                     <img src="/covers/couleur.webp" alt="Another" />
-                    <span className="slide-title">Nouvelle Couleur/Morceau/2025</span>
+                    <div className="slide-info">
+                      <span className="slide-title">Nouvelle Couleur/Morceau/1 titre</span>
+                      <span className="slide-year">2025</span>
+                    </div>
                 </div>
 
                 <div className="embla-musique__slide">
                     <img src="/covers/gagner.webp" alt="Another" />
-                    <span className="slide-title">Gagner c'est bien perdre ça craint/Morceau/2025</span>
+                    <div className="slide-info">
+                      <span className="slide-title">Gagner c'est bien perdre ca craint/Morceau/1 titre</span>
+                      <span className="slide-year">2025</span>
+                    </div>
                 </div>
 
                 <div className="embla-musique__slide">
                     <img src="/covers/oignon.webp" alt="Another" />
-                    <span className="slide-title">Le garçon oignon/morceau/2025</span>
+                    <div className="slide-info">
+                      <span className="slide-title">Le garcon oignon/morceau/1 titre</span>
+                      <span className="slide-year">2025</span>
+                    </div>
                 </div>
 
                 <div className="embla-musique__slide">
                     <img src="/covers/pandore.webp" alt="Another" />
-                    <span className="slide-title">Pandore/EP/2023</span>
+                    <div className="slide-info">
+                      <span className="slide-title">Pandore/EP/5 titres</span>
+                      <span className="slide-year">2023</span>
+                    </div>
                 </div>
 
                 <div className="embla-musique__slide">
                     <img src="/covers/morceau.webp" alt="Another" />
-                    <span className="slide-title">Le grand morçeau/morceau/2025</span>
+                    <div className="slide-info">
+                      <span className="slide-title">Le grand morceau/morceau/1 titre</span>
+                      <span className="slide-year">2025</span>
+                    </div>
                 </div>
 
                 <div className="embla-musique__slide">
                     <img src="/covers/saturn.webp" alt="Another" />
-                    <span className="slide-title">Lisa From Saturn/Album/2021</span>
+                    <div className="slide-info">
+                      <span className="slide-title">Lisa From Saturn/Album/10 titres</span>
+                      <span className="slide-year">2021</span>
+                    </div>
                 </div>
 
             </div>            
