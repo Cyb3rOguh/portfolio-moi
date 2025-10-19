@@ -9,9 +9,30 @@ const VideoCarousel: React.FC = () => {
     <div className="embla" ref={emblaRef}>
       <div className="embla__container">
 
-        <div className="embla__slide">Video 1</div>
+        <div className="embla__slide">
+          <video
+            src="/videos/gagner.mp4"
+            controls
+            muted
+            loop
+            playsInline
+            style={{ width: '100%', height: 'auto', borderRadius: '10px' }}
+          />
+        </div>
         
-        <div className="embla__slide">Video 2</div>
+        
+        <div className="embla__slide" style={{ width: '140px' }}>
+          <video
+            src="/videos/gentil.mp4"
+            controls
+            muted
+            loop
+            playsInline
+            style={{ width: 'auto', height: '100%', borderRadius: '10px' }}
+          />
+        </div>
+
+
         <div className="embla__slide">Video 3</div>
       </div>
     </div>
