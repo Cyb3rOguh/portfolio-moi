@@ -2,75 +2,36 @@ import React from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import './video.css'; // Add custom styles for the carousel
 
+const slides = [
+  { src: '/videos/gagner.mp4' },
+  { src: '/videos/nouvellecouleur.mp4', width: '860px' },
+  { src: '/videos/oignon.mp4', width: '450px' },
+  { src: '/videos/rodman.mp4', width: '450px' },
+  { src: '/videos/gentil.mp4', width: '140px', videoStyle: { width: 'auto', height: '100%' } },
+];
+
 const VideoCarousel: React.FC = () => {
   const [emblaRef] = useEmblaCarousel({ containScroll: 'trimSnaps', align: 'start', dragFree: true, slidesToScroll: 'auto' });
 
   return (
     <div className="embla" ref={emblaRef}>
       <div className="embla__container">
-
-        {/*Gagner*/}
-        <div className="embla__slide">
-          <video
-            src="/videos/gagner.mp4"
-            controls
-            muted
-            loop
-            playsInline
-            style={{ width: '100%', height: 'auto' }}
-          />
-        </div>
-
-        {/*nouvelle couleur*/}
-        <div className="embla__slide" style={{ width: '380px' }}>
-          <video
-            src="/videos/nouvellecouleur.mp4"
-            controls
-            muted
-            loop
-            playsInline
-            style={{ width: '100%', height: 'auto' }}
-          />
-        </div>
-
-        {/*oignon*/}
-        <div className="embla__slide" style={{ width: '450px' }}>
-          <video
-            src="/videos/oignon.mp4"
-            controls
-            muted
-            loop
-            playsInline
-            style={{ width: '100%', height: 'auto' }}
-          />
-        </div>
-
-        {/*rodman*/}
-        <div className="embla__slide" style={{ width: '450px' }}>
-          <video
-            src="/videos/rodman.mp4"
-            controls
-            muted
-            loop
-            playsInline
-            style={{ width: '100%', height: 'auto' }}
-          />
-        </div>
-        
-        {/*Studio Gentil*/}
-        <div className="embla__slide" style={{ width: '140px' }}>
-          <video
-            src="/videos/gentil.mp4"
-            controls
-            muted
-            loop
-            playsInline
-            style={{ width: 'auto', height: '100%' }}
-          />
-        </div>
-
-
-        <div className="embla__slide">Video 3</div>
+        {slides.map((slide, index) => (
+          <div
+            className="embla__slide"
+            key={index}
+            style={slide.width ? { width: slide.width } : undefined}
+          >
+            <video
+              src={slide.src}
+              controls
+              muted
+              loop
+              playsInline
+              style={slide.videoStyle ? slide.videoStyle : undefined}
+            />
+          </div>
+        ))}
       </div>
     </div>
   );
