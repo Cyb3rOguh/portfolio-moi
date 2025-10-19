@@ -27,33 +27,26 @@ h1 {
   display: flex;
 }
 
-.btn {
-  background-color: grey;
-  color: #007bff;
-  border: 2px solid #ffffff;
-  padding: 12px 24px;
-  font-size: 1.2rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.btn:hover {
-  background-color: #0056b3;
-  color: white;
-}
-
-
 .header {
   position: fixed;
   top: 0;
   width: 100%;
   text-align: center;
   z-index: 1;
-  color: white;
+  color: #102542;
 }
 
 .header h1 {
   font-family: 'DotMatrix', monospace;
   letter-spacing: inherit;
-  
+  font-size: 4rem;
+}
+
+.footer {
+  position: fixed;
+  bottom: 40px;
+  width: 100%;
+  text-align: center;
+  height: 56px;
+  z-index: 1;
 }
