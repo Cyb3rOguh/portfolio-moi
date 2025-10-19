@@ -37,7 +37,7 @@ const MusiqueCarousel = () => {
                 {/* nouvelle couleur */}
                 <div className="embla-musique__slide">
                   <a
-                    href="https://open.spotify.com/track/1XQb5tI4uA5XfXn7Q6JkJr"
+                    href="https://gaajuto.bandcamp.com/track/nouvelle-couleur"
                     target="_blank"
                     rel="noopener noreferrer"
                     style={{ textDecoration: 'none' }}
@@ -53,7 +53,7 @@ const MusiqueCarousel = () => {
                 {/* gagner c'est bien perdre ça craint */}
                 <div className="embla-musique__slide">
                   <a
-                    href="https://open.spotify.com/track/7pYy7Q8G2Zg4s8v2Vn0jvE"
+                    href="https://gaajuto.bandcamp.com/track/gagner-cest-bien-perdre-a-craint"
                     target="_blank"
                     rel="noopener noreferrer"
                     style={{ textDecoration: 'none' }}
@@ -69,7 +69,7 @@ const MusiqueCarousel = () => {
                 {/* le garçon oignon */}
                 <div className="embla-musique__slide">
                   <a
-                    href="https://open.spotify.com/track/3oR9yZ4Z5kLwK0V7q9n6jN"
+                    href="https://gaajuto.bandcamp.com/track/le-gar-on-oignon"
                     target="_blank"
                     rel="noopener noreferrer"
                     style={{ textDecoration: 'none' }}
@@ -85,7 +85,7 @@ const MusiqueCarousel = () => {
                 {/* Pandore */}
                 <div className="embla-musique__slide">
                   <a
-                    href="https://open.spotify.com/album/5q1j6uF9r9z6xU8kK7b2Yw"
+                    href="https://gaajuto.bandcamp.com/album/pandore"
                     target="_blank"
                     rel="noopener noreferrer"
                     style={{ textDecoration: 'none' }}
@@ -101,7 +101,7 @@ const MusiqueCarousel = () => {
                 {/* le grand morçeau */}
                 <div className="embla-musique__slide">
                   <a
-                    href="https://open.spotify.com/track/6zKQwUjB1o2Qq7S6z4BEB1"
+                    href="https://gaajuto.bandcamp.com/track/le-grand-morceau"
                     target="_blank"
                     rel="noopener noreferrer"
                     style={{ textDecoration: 'none' }}
@@ -117,7 +117,7 @@ const MusiqueCarousel = () => {
                 {/* Lisa From Saturn */}
                 <div className="embla-musique__slide">
                   <a
-                    href="https://open.spotify.com/album/6Q0oQwUjB1o2Qq7S6z4BEB"
+                    href="https://gaajuto.bandcamp.com/album/lisa-from-saturn"
                     target="_blank"
                     rel="noopener noreferrer"
                     style={{ textDecoration: 'none' }}
