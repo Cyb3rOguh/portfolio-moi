@@ -36,9 +36,10 @@
 .slide-title {
   opacity: 0;
   text-align: center;
-  margin-top: 4px;
+  margin-top: 0px;
   text-align: left;
   align-self: flex-start;
+  color: #102542;
   /* Optional: font-size, color, etc. */
 }
 
