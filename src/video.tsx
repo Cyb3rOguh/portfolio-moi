@@ -29,7 +29,7 @@ const VideoCarousel: React.FC = () => {
             className="embla__slide"
             key={index}
           >
-            <a href={slide.url} target="_blank" rel="noopener noreferrer">
+            <a href={slide.url} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
               <video
                 src={slide.src}
                 controls
