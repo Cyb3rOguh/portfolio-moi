@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'DotMatrix';
+  src: url('../public/fonts/dotmatri.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .App {
   display: flex;
   flex-direction: column;
@@ -6,13 +13,15 @@
   height: 100vh;
   background-color: #EEE82C; /* bleu */
   color: white;
-  font-family: 'Arial', sans-serif;
+  font-family: 'DotMatrix', sans-serif;
 }
 
 h1 {
   margin-bottom: 40px;
   font-size: 2rem;
 }
+
+
 
 .buttons {
   display: flex;
@@ -31,4 +40,20 @@ h1 {
 .btn:hover {
   background-color: #0056b3;
   color: white;
+}
+
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 1;
+  color: white;
+}
+
+.header h1 {
+  font-family: 'DotMatrix', monospace;
+  letter-spacing: inherit;
+  
 }
