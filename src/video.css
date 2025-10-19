@@ -8,6 +8,8 @@
     user-select: none;
     -webkit-touch-callout: none;
     -webkit-tap-highlight-color: transparent;
+    gap: 10%; /* Increased gap to add more space between slides */
+    padding: 0 120px; /* adds space before first and after last */
   }
   
   .embla__slide {
@@ -25,4 +27,5 @@
     pointer-events: none;   /* Allow dragging carousel over the video [oai_citation:12‡dev.to](https://dev.to/siaust/make-your-own-html-carousel-in-react-177k#:~:text=dragging%20of%20the%20card%2C%20we,you%20want%20or%20need%20to) */
     user-select: none;
     outline: none;
+    border-radius: 16px;
   }
