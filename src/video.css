@@ -5,12 +5,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid red;
 }
 
 .embla__container {
     display: flex;
     flex-direction: row;
+    border: 1px solid red;
     gap: 10px;
     gap: 120px; /* Increased gap to add more space between slides */    
     padding: 0 120px; /* adds space before first and after last */
@@ -23,9 +23,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 400px;
-  height: 250px;
+  width: 700px;
+  height: 700px;
   background: black;
   color: white;
 }
 
+.embla__slide video {
+  width: auto;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
