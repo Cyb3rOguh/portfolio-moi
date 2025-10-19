@@ -44,6 +44,18 @@ const VideoCarousel: React.FC = () => {
             style={{ width: '100%', height: 'auto' }}
           />
         </div>
+
+        {/*rodman*/}
+        <div className="embla__slide" style={{ width: '450px' }}>
+          <video
+            src="/videos/rodman.mp4"
+            controls
+            muted
+            loop
+            playsInline
+            style={{ width: '100%', height: 'auto' }}
+          />
+        </div>
         
         {/*Studio Gentil*/}
         <div className="embla__slide" style={{ width: '140px' }}>
