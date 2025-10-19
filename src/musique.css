@@ -23,10 +23,8 @@
   
   .embla-musique__slide img {
     width: 100%;
-    height: 100%;
-    
+    object-fit: contain;
     border-radius: 16px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
   }
 
   .embla-musique__container:hover .embla-musique__slide:not(:hover) {
@@ -66,7 +64,7 @@
 
 @media (max-width: 768px) {
   .embla-musique__slide {
-    height: 20px;
+    height: 15px;
     aspect-ratio: 1 / 1;
   }
 }
