@@ -44,7 +44,7 @@ const MusiqueCarousel = () => {
                   >
                     <img src="/covers/couleur.webp" alt="Nouvelle Couleur" />
                     <div className="slide-info">
-                      <span className="slide-title">Nouvelle Couleur/Morceau/1 titre</span>
+                      <span className="slide-title">nouvelle couleur</span>
                       <span className="slide-year">2025</span>
                     </div>
                   </a>
@@ -60,7 +60,7 @@ const MusiqueCarousel = () => {
                   >
                     <img src="/covers/gagner.webp" alt="Gagner c'est bien perdre ca craint" />
                     <div className="slide-info">
-                      <span className="slide-title">Gagner/Morceau/1 titre</span>
+                      <span className="slide-title">Gagner c'est bien perdre ca craint/</span>
                       <span className="slide-year">2025</span>
                     </div>
                   </a>
@@ -76,7 +76,7 @@ const MusiqueCarousel = () => {
                   >
                     <img src="/covers/oignon.webp" alt="Le garcon oignon" />
                     <div className="slide-info">
-                      <span className="slide-title">Le garcon oignon/morceau/1 titre</span>
+                      <span className="slide-title">Le garcon oignon</span>
                       <span className="slide-year">2025</span>
                     </div>
                   </a>
@@ -108,7 +108,7 @@ const MusiqueCarousel = () => {
                   >
                     <img src="/covers/morceau.webp" alt="Le grand morceau" />
                     <div className="slide-info">
-                      <span className="slide-title">Le grand morceau/morceau/1 titre</span>
+                      <span className="slide-title">Le grand morceau</span>
                       <span className="slide-year">2025</span>
                     </div>
                   </a>
