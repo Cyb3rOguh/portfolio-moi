@@ -18,6 +18,7 @@ const MusiqueCarousel = () => {
 
             <div className="embla-musique__container">
                 
+                {/* bébé */}
                 <div className="embla-musique__slide">
                   <a
                     href="https://gaajuto-bb.ch/unique"
@@ -33,6 +34,7 @@ const MusiqueCarousel = () => {
                   </a>
                 </div>
 
+                {/* nouvelle couleur */}
                 <div className="embla-musique__slide">
                   <a
                     href="https://open.spotify.com/track/1XQb5tI4uA5XfXn7Q6JkJr"
@@ -48,6 +50,7 @@ const MusiqueCarousel = () => {
                   </a>
                 </div>
 
+                {/* gagner c'est bien perdre ça craint */}
                 <div className="embla-musique__slide">
                   <a
                     href="https://open.spotify.com/track/7pYy7Q8G2Zg4s8v2Vn0jvE"
@@ -63,6 +66,7 @@ const MusiqueCarousel = () => {
                   </a>
                 </div>
 
+                {/* le garçon oignon */}
                 <div className="embla-musique__slide">
                   <a
                     href="https://open.spotify.com/track/3oR9yZ4Z5kLwK0V7q9n6jN"
@@ -78,6 +82,7 @@ const MusiqueCarousel = () => {
                   </a>
                 </div>
 
+                {/* Pandore */}
                 <div className="embla-musique__slide">
                   <a
                     href="https://open.spotify.com/album/5q1j6uF9r9z6xU8kK7b2Yw"
@@ -93,6 +98,7 @@ const MusiqueCarousel = () => {
                   </a>
                 </div>
 
+                {/* le grand morçeau */}
                 <div className="embla-musique__slide">
                   <a
                     href="https://open.spotify.com/track/6zKQwUjB1o2Qq7S6z4BEB1"
@@ -108,6 +114,7 @@ const MusiqueCarousel = () => {
                   </a>
                 </div>
 
+                {/* Lisa From Saturn */}
                 <div className="embla-musique__slide">
                   <a
                     href="https://open.spotify.com/album/6Q0oQwUjB1o2Qq7S6z4BEB"
