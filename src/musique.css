@@ -15,7 +15,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    transition: opacity 0.3s ease;
   }
   
   .embla-musique__slide img {
@@ -24,4 +24,8 @@
     max-height: 100%;
     border-radius: 16px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .embla-musique__container:hover .embla-musique__slide:not(:hover) {
+    opacity: 0.5;
   }
