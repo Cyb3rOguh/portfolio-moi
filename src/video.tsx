@@ -9,6 +9,7 @@ const VideoCarousel: React.FC = () => {
     <div className="embla" ref={emblaRef}>
       <div className="embla__container">
 
+        {/*Gagner*/}
         <div className="embla__slide">
           <video
             src="/videos/gagner.mp4"
@@ -19,8 +20,20 @@ const VideoCarousel: React.FC = () => {
             style={{ width: '100%', height: 'auto', borderRadius: '10px' }}
           />
         </div>
+
+        {/*nouvelle couleur*/}
+        <div className="embla__slide" style={{ width: '370px' }}>
+          <video
+            src="/videos/nouvellecouleur.mp4"
+            controls
+            muted
+            loop
+            playsInline
+            style={{ width: '100%', height: 'auto', borderRadius: '10px' }}
+          />
+        </div>
         
-        
+        {/*Studio Gentil*/}
         <div className="embla__slide" style={{ width: '140px' }}>
           <video
             src="/videos/gentil.mp4"
