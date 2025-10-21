@@ -33,6 +33,7 @@ const MusiqueCarousel = () => {
     ];
 
     return (
+      <div className="embla-musique-wrapper">
         <div className="embla-musique" ref={emblaRef}>
 
             <div className="embla-musique__container">
@@ -46,10 +47,6 @@ const MusiqueCarousel = () => {
                     style={{ textDecoration: 'none' }}
                   >
                     <img src="/covers/bb.webp" alt="Zebre" />
-                    <div className="slide-info">
-                      <span className="slide-title">Bebe/Album/10 titres</span>
-                      <span className="slide-year">2025</span>
-                    </div>
                   </a>
                 </div>
 
@@ -62,10 +59,6 @@ const MusiqueCarousel = () => {
                     style={{ textDecoration: 'none' }}
                   >
                     <img src="/covers/couleur.webp" alt="Nouvelle Couleur" />
-                    <div className="slide-info">
-                      <span className="slide-title">nouvelle couleur</span>
-                      <span className="slide-year">2025</span>
-                    </div>
                   </a>
                 </div>
 
@@ -78,10 +71,6 @@ const MusiqueCarousel = () => {
                     style={{ textDecoration: 'none' }}
                   >
                     <img src="/covers/gagner.webp" alt="Gagner c'est bien perdre ca craint" />
-                    <div className="slide-info" >
-                      <span className="slide-title">Gagner c'est bien perdre ca craint</span>
-                      <span className="slide-year">2025</span>
-                    </div>
                   </a>
                 </div>
 
@@ -94,10 +83,6 @@ const MusiqueCarousel = () => {
                     style={{ textDecoration: 'none' }}
                   >
                     <img src="/covers/oignon.webp" alt="Le garcon oignon" />
-                    <div className="slide-info">
-                      <span className="slide-title">Le garcon oignon</span>
-                      <span className="slide-year">2025</span>
-                    </div>
                   </a>
                 </div>
 
@@ -110,10 +95,6 @@ const MusiqueCarousel = () => {
                     style={{ textDecoration: 'none' }}
                   >
                     <img src="/covers/pandore.webp" alt="Pandore" />
-                    <div className="slide-info">
-                      <span className="slide-title">Pandore/EP/5 titres</span>
-                      <span className="slide-year">2023</span>
-                    </div>
                   </a>
                 </div>
 
@@ -126,10 +107,6 @@ const MusiqueCarousel = () => {
                     style={{ textDecoration: 'none' }}
                   >
                     <img src="/covers/morceau.webp" alt="Le grand morceau" />
-                    <div className="slide-info">
-                      <span className="slide-title">Le grand morceau</span>
-                      <span className="slide-year">2025</span>
-                    </div>
                   </a>
                 </div>
 
@@ -142,22 +119,19 @@ const MusiqueCarousel = () => {
                     style={{ textDecoration: 'none' }}
                   >
                     <img src="/covers/saturn.webp" alt="Lisa From Saturn" />
-                    <div className="slide-info">
-                      <span className="slide-title">Lisa From Saturn/Album/10 titres</span>
-                      <span className="slide-year">2021</span>
-                    </div>
                   </a>
                 </div>
 
             </div>
-
-            {/*le titre sur mobile*/}            
-            <div className="carousel-info-musique">
+        
+              
+        </div>
+        {/* Dynamic info below the carousel */}
+        <div className="carousel-info-musique">
               <span className="carousel-title">{slides[currentSlide].title}</span>
               <span className="carousel-year">{slides[currentSlide].year}</span>
-            </div>  
         </div>
-            
+      </div>
     );
 };
 
