@@ -60,7 +60,7 @@ const VideoCarousel: React.FC = () => {
       </div>
 
       {/* le titre sur mobile */}
-      <div className="carousel-info">
+      <div className="carousel-info-video">
         <span className="carousel-title">{slides[currentSlide].title}</span>
         <span className="carousel-year">{slides[currentSlide].year}</span>
       </div>

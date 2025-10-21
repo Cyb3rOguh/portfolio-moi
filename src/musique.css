@@ -6,14 +6,16 @@
     padding: 0 120px; /* adds space before first and after last */
   }
 
-  .carousel-info {
+  .carousel-info-musique {
     display: flex;
     justify-content: center;
     gap: 10px;
     margin-top: 10px;
-    color: white; /* or any visible color */
+    color: #102542; /* or any visible color */
     font-size: 1.2rem;
     text-align: center;
+    position: relative;
+    z-index: 10;
   }
 
   .embla-musique__slide {

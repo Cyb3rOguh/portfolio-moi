@@ -10,6 +10,18 @@
     gap: 120px; /* Increased gap to add more space between slides */
     padding: 0 120px; /* adds space before first and after last */
   }
+
+  .carousel-info-video {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+    color: #102542; /* or any visible color */
+    font-size: 1.2rem;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+  }
   
   .embla__slide {
     /* Let each slide size itself to its content */

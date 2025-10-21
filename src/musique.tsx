@@ -152,7 +152,7 @@ const MusiqueCarousel = () => {
             </div>
 
             {/*le titre sur mobile*/}            
-            <div className="carousel-info">
+            <div className="carousel-info-musique">
               <span className="carousel-title">{slides[currentSlide].title}</span>
               <span className="carousel-year">{slides[currentSlide].year}</span>
             </div>  
