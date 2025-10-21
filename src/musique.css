@@ -1,8 +1,19 @@
+.embla-musique-wrapper {
+  display: flex;
+  flex-direction: column; /* stack carousel and info vertically */
+  align-items: center; /* center horizontally */
+  border: 1px solid red;
+  
+}
+
 .embla-musique__container {
     display: flex;
+    flex-direction: row;
     user-select: none;
     gap: 120px; /* Increased gap to add more space between slides */
     padding: 0 120px; /* adds space before first and after last */
+    
+    
 }
 
   .carousel-info-musique {
@@ -15,6 +26,7 @@
     text-align: center;
     position: relative;
     z-index: 10;
+    border: 1px solid white;
   }
 
   .embla-musique__slide {
@@ -29,12 +41,16 @@
     justify-content: center;
     align-items: center;
     transition: opacity 0.5s ease, width 0.5s ease, height 0.5s ease;
+    
   }
   
   .embla-musique__slide img {
     width: 100%;
     object-fit: contain;
     border-radius: 16px;
+    display: block; /* ensure it behaves as a block element to stack content below */
+    border: 1px solid white;
+    margin-bottom: 0.5rem; /* add spacing for text below */
   }
 
   .embla-musique__container:hover .embla-musique__slide:not(:hover) {
