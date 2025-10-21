@@ -32,11 +32,11 @@ const VideoCarousel: React.FC = () => {
             <a href={slide.url} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
               <video
                 src={slide.src}
-                controls
                 muted
                 loop
                 playsInline
                 autoPlay
+                preload="metadata"
               />
               <div className="slide-info">
                 <span className="slide-title">{slide.title}</span>
