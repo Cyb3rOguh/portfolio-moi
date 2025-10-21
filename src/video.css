@@ -58,7 +58,7 @@
   
   @media (max-width: 768px) {
     .embla__slide video {
-      max-height: 20vh; /* scale video size based on viewport height */
+      max-height: 25vh; /* scale video size based on viewport height */
       width: auto;
       pointer-events: none;
       border-radius: 16px;
