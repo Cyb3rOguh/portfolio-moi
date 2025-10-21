@@ -55,4 +55,16 @@
     opacity: 1;
   }
   
-  
+  @media (max-width: 768px) {
+    .embla__slide video {
+      max-height: 25vh; /* scale video size based on viewport height */
+      width: auto;
+      pointer-events: none;
+      border-radius: 16px;
+    }
+
+    .embla__container {
+      gap: 60px;
+      padding: 0 60px;
+    }
+  }
