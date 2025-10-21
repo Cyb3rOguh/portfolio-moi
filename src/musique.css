@@ -18,7 +18,6 @@
     justify-content: center;
     align-items: center;
     transition: opacity 0.5s ease, width 0.5s ease, height 0.5s ease;
-    
   }
   
   .embla-musique__slide img {
@@ -67,6 +66,15 @@
     height: 15px;
     aspect-ratio: 1 / 1;
   }
+
+  .embla-musique__container:hover .embla-musique__slide:not(:hover) {
+    opacity: 1;
+  }
+
+  .embla-musique__slide:hover .slide-title,
+  .embla-musique__slide:hover .slide-year {
+    opacity: 0;
+  }
 }
 
 @media (min-width: 769px) and (max-width: 1200px) {
@@ -75,4 +83,3 @@
     aspect-ratio: 1 / 1;
   }
 }
-

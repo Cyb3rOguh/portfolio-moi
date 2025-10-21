@@ -60,7 +60,7 @@ const MusiqueCarousel = () => {
                   >
                     <img src="/covers/gagner.webp" alt="Gagner c'est bien perdre ca craint" />
                     <div className="slide-info" >
-                      <span className="slide-title">Gagner c'est bien perdre ca craint/</span>
+                      <span className="slide-title">Gagner c'est bien perdre ca craint</span>
                       <span className="slide-year">2025</span>
                     </div>
                   </a>
