@@ -1,61 +1,63 @@
 .embla-musique-wrapper {
   display: flex;
-  flex-direction: column; /* stack carousel and info vertically */
-  align-items: center; /* center horizontally */
-  border: 1px solid red;
-  
+  flex-direction: column;
+  align-items: center;
+}
+
+.embla-musique {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem; /* space between carousel and text */
 }
 
 .embla-musique__container {
-    display: flex;
-    flex-direction: row;
-    user-select: none;
-    gap: 120px; /* Increased gap to add more space between slides */
-    padding: 0 120px; /* adds space before first and after last */
-    
-    
+  display: flex;
+  flex-direction: row;
+  user-select: none;
+  gap: 120px;
+  padding: 0 120px;
+  overflow: hidden;
+  border: 1px solid #ddd;
 }
 
-  .carousel-info-musique {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 10px;
-    color: #102542; /* or any visible color */
-    font-size: 1.2rem;
-    text-align: center;
-    position: relative;
-    z-index: 10;
-    border: 1px solid white;
-  }
+.carousel-info-musique {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+  color: #102542;
+  font-size: 1.2rem;
+  text-align: center;
+  position: relative;
+  z-index: 0;
+}
 
-  .embla-musique__slide {
-    flex: 0 0 auto;
-    width: 40%;
-    height: 200px;
-    max-width: 600px;
-    min-width: 0px;
-    aspect-ratio: 1 / 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: opacity 0.5s ease, width 0.5s ease, height 0.5s ease;
-    
-  }
+.embla-musique__slide {
+  flex: 0 0 auto;
+  width: 70vw; /* scales with viewport width */
+  max-width: 600px;
+  aspect-ratio: 1 / 1; /* always square */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.5s ease, width 0.5s ease, height 0.5s ease;
   
-  .embla-musique__slide img {
-    width: 100%;
-    object-fit: contain;
-    border-radius: 16px;
-    display: block; /* ensure it behaves as a block element to stack content below */
-    border: 1px solid white;
-    margin-bottom: 0.5rem; /* add spacing for text below */
-  }
+}
 
-  .embla-musique__container:hover .embla-musique__slide:not(:hover) {
-    opacity: 0.5;
-  }
+.embla-musique__slide img {
+  width: 100%;
+  object-fit: contain;
+  border-radius: 16px;
+  display: block; /* ensure it behaves as a block element to stack content below */
+  border: 1px solid white;
+  margin-bottom: 0.5rem; /* add spacing for text below */
+}
+
+.embla-musique__container:hover .embla-musique__slide:not(:hover) {
+  opacity: 0.5;
+}
 
 
 /* Slide info container styles */
@@ -90,7 +92,8 @@
 
 @media (max-width: 768px) {
   .embla-musique__slide {
-    height: 15px;
+    width: 80vw;
+    max-width: 300px;
     aspect-ratio: 1 / 1;
   }
 
@@ -106,7 +109,8 @@
 
 @media (min-width: 769px) and (max-width: 1200px) {
   .embla-musique__slide {
-    height: 50px;
+    width: 60vw;
+    max-width: 500px;
     aspect-ratio: 1 / 1;
   }
 }
