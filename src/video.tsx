@@ -11,7 +11,7 @@ const slides = [
   { src: '/videos/gentil.mp4', title: 'Studio Gentil/Dessin anime', year: "2023", url: "https://www.instagram.com/p/Cg4jiuwjgiQ/" },
 ];
 
-const VideoCarousel: React.FC = () => {
+const VideoCarousel = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel(
     {
       loop: true,
