@@ -7,8 +7,8 @@ const MusiqueCarousel = () => {
     const [emblaRef, emblaApi] = useEmblaCarousel(
         {
           loop: true,
-          align: 'center',      // Centers slides, improving spacing visually
-          containScroll: 'trimSnaps' // Prevents overflow alignment issues
+          align: 'center',
+          containScroll: 'trimSnaps'
         },
         [Autoplay({ delay: 3000, stopOnMouseEnter: true, stopOnInteraction: false })]
       );
@@ -19,7 +19,7 @@ const MusiqueCarousel = () => {
       if (!emblaApi) return;
       const updateSlide = () => setCurrentSlide(emblaApi.selectedScrollSnap());
       emblaApi.on('select', updateSlide);
-      updateSlide(); // Initialize
+      updateSlide();
     }, [emblaApi]);
 
     const slides = [
@@ -46,7 +46,7 @@ const MusiqueCarousel = () => {
                     rel="noopener noreferrer"
                     style={{ textDecoration: 'none' }}
                   >
-                    <img src="/covers/bb.webp" alt="Zebre" />
+                    <img src={process.env.PUBLIC_URL + "/covers/bb.webp"} alt="Zebre" />
                   </a>
                 </div>
 
@@ -58,7 +58,7 @@ const MusiqueCarousel = () => {
                     rel="noopener noreferrer"
                     style={{ textDecoration: 'none' }}
                   >
-                    <img src="/covers/couleur.webp" alt="Nouvelle Couleur" />
+                    <img src={process.env.PUBLIC_URL + "/covers/couleur.webp"} alt="Nouvelle Couleur" />
                   </a>
                 </div>
 
@@ -70,7 +70,7 @@ const MusiqueCarousel = () => {
                     rel="noopener noreferrer"
                     style={{ textDecoration: 'none' }}
                   >
-                    <img src="/covers/gagner.webp" alt="Gagner c'est bien perdre ca craint" />
+                    <img src={process.env.PUBLIC_URL + "/covers/gagner.webp"} alt="Gagner c'est bien perdre ca craint" />
                   </a>
                 </div>
 
@@ -82,7 +82,7 @@ const MusiqueCarousel = () => {
                     rel="noopener noreferrer"
                     style={{ textDecoration: 'none' }}
                   >
-                    <img src="/covers/oignon.webp" alt="Le garcon oignon" />
+                    <img src={process.env.PUBLIC_URL + "/covers/oignon.webp"} alt="Le garcon oignon" />
                   </a>
                 </div>
 
@@ -94,7 +94,7 @@ const MusiqueCarousel = () => {
                     rel="noopener noreferrer"
                     style={{ textDecoration: 'none' }}
                   >
-                    <img src="/covers/pandore.webp" alt="Pandore" />
+                    <img src={process.env.PUBLIC_URL + "/covers/pandore.webp"} alt="Pandore" />
                   </a>
                 </div>
 
@@ -106,7 +106,7 @@ const MusiqueCarousel = () => {
                     rel="noopener noreferrer"
                     style={{ textDecoration: 'none' }}
                   >
-                    <img src="/covers/morceau.webp" alt="Le grand morceau" />
+                    <img src={process.env.PUBLIC_URL + "/covers/morceau.webp"} alt="Le grand morceau" />
                   </a>
                 </div>
 
@@ -118,15 +118,13 @@ const MusiqueCarousel = () => {
                     rel="noopener noreferrer"
                     style={{ textDecoration: 'none' }}
                   >
-                    <img src="/covers/saturn.webp" alt="Lisa From Saturn" />
+                    <img src={process.env.PUBLIC_URL + "/covers/saturn.webp"} alt="Lisa From Saturn" />
                   </a>
                 </div>
 
             </div>
         
-              
         </div>
-        {/* Dynamic info below the carousel */}
         <div className="carousel-info-musique">
               <span className="carousel-title">{slides[currentSlide].title}</span>
         </div>
