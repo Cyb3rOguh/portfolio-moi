@@ -23,13 +23,13 @@ const MusiqueCarousel = () => {
     }, [emblaApi]);
 
     const slides = [
-      { title: 'Bebe/Album/10 titres', year: '2025' },
-      { title: 'nouvelle couleur', year: '2025' },
-      { title: "Gagner c'est bien perdre ca craint", year: '2025' },
-      { title: 'Le garcon oignon', year: '2025' },
-      { title: 'Pandore/EP/5 titres', year: '2023' },
-      { title: 'Le grand morceau', year: '2025' },
-      { title: 'Lisa From Saturn/Album/10 titres', year: '2021' },
+      { title: 'Bebe/Album/10 titres/2025' },
+      { title: 'nouvelle couleur/2025' },
+      { title: "Gagner c'est bien perdre ca craint/2025" },
+      { title: 'Le garcon oignon/2025' },
+      { title: 'Pandore/EP/5 titres/2023' },
+      { title: 'Le grand morceau/2025' },
+      { title: 'Lisa From Saturn/Album/10 titres/2021' },
     ];
 
     return (
@@ -129,7 +129,6 @@ const MusiqueCarousel = () => {
         {/* Dynamic info below the carousel */}
         <div className="carousel-info-musique">
               <span className="carousel-title">{slides[currentSlide].title}</span>
-              <span className="carousel-year">{slides[currentSlide].year}</span>
         </div>
       </div>
     );

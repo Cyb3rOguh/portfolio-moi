@@ -76,16 +76,8 @@
   align-self: flex-start;
 }
 
-.slide-year {
-  opacity: 0;
-  color: #102542;
-  font-size: 1rem;
-  margin: 0;
-  align-self: flex-end;
-}
 
-.embla-musique__slide:hover .slide-title,
-.embla-musique__slide:hover .slide-year {
+.embla-musique__slide:hover .slide-title {
   opacity: 1;
 }
 
@@ -100,8 +92,7 @@
     opacity: 1;
   }
 
-  .embla-musique__slide:hover .slide-title,
-  .embla-musique__slide:hover .slide-year {
+  .embla-musique__slide:hover .slide-title {
     opacity: 0;
   }
 }
@@ -132,8 +123,7 @@
     opacity: 1;
   }
 
-  .embla-musique__slide:hover .slide-title,
-  .embla-musique__slide:hover .slide-year {
+  .embla-musique__slide:hover .slide-title {
     opacity: 0;
   }
 }
