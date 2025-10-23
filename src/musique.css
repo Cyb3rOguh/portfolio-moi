@@ -8,24 +8,21 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-bottom: 2rem; /* space between carousel and text */
 }
 
 .embla-musique__container {
   display: flex;
   flex-direction: row;
-  user-select: none;
   gap: 120px;
   padding: 0 120px;
-  overflow: hidden;
   border: 1px solid #ddd;
+  touch-action: pan-y; /* allows horizontal drag */
 }
 
 .carousel-info-musique {
   display: flex;
   justify-content: center;
   gap: 10px;
-  margin-top: 20px;
   color: #102542;
   font-size: 1.2rem;
   text-align: center;
@@ -35,15 +32,19 @@
 
 .embla-musique__slide {
   flex: 0 0 auto;
-  width: 70vw; /* scales with viewport width */
-  max-width: 600px;
+    min-width: 0;
+    max-height: 620px;
   aspect-ratio: 1 / 1; /* always square */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   transition: opacity 0.5s ease, width 0.5s ease, height 0.5s ease;
-  
+  cursor: grab;
+}
+
+.embla-musique__slide:active {
+  cursor: grabbing;
 }
 
 .embla-musique__slide img {
@@ -52,7 +53,6 @@
   border-radius: 16px;
   display: block; /* ensure it behaves as a block element to stack content below */
   border: 1px solid white;
-  margin-bottom: 0.5rem; /* add spacing for text below */
 }
 
 .embla-musique__container:hover .embla-musique__slide:not(:hover) {
