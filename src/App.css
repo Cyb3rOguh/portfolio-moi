@@ -39,8 +39,9 @@ h1 {
   top: 0;
   width: 100%;
   text-align: center;
-  z-index: 1;
+  z-index: 0;
   color: #102542;
+  background-color: #EEE82C; /* bleu */
 }
 
 .header h1 {
