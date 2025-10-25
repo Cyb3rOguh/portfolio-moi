@@ -13,7 +13,7 @@
     background: #102542;
     border-radius: 25px;
     cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   }
   
   .toggle-thumb {

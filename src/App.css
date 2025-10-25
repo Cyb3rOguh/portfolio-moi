@@ -24,7 +24,6 @@
 }
 
 h1 {
-  margin-bottom: 40px;
   font-size: 2rem;
 }
 
@@ -36,23 +35,28 @@ h1 {
 
 .header {
   position: fixed;
-  top: 0;
   width: 100%;
+  height: auto; 
+  display: flex;
+  align-items: flex-start; /* pushes text to the top */
+  justify-content: center; /* center horizontally */
   text-align: center;
-  z-index: 0;
+  z-index: 10;
   color: #102542;
-  background-color: #EEE82C; /* bleu */
+  background-color: #EEE82C;
 }
 
 .header h1 {
   font-family: 'DotMatrix', monospace;
   letter-spacing: inherit;
   font-size: 4rem;
+  align-self: flex-start; 
+  margin-top: 0; 
+  padding-top: 20px; /* espace en haut */
 }
 
 .footer {
   position: fixed;
-  bottom: 40px;
   width: 100%;
   text-align: center;
   height: 56px;
