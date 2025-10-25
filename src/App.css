@@ -21,6 +21,12 @@
   background-color: #EEE82C; /* bleu */
   color: white;
   font-family: 'DotMatrix', sans-serif;
+  cursor: url('../public/frog.png'), auto;
+  z-index: 2;
+}
+
+a {
+  cursor: url('../public/frog-pointy.png'), pointer;
 }
 
 h1 {
@@ -44,6 +50,7 @@ h1 {
   z-index: 10;
   color: #102542;
   background-color: #EEE82C;
+  cursor: url('../public/frog.png'), auto;
 }
 
 .header h1 {
@@ -54,6 +61,7 @@ h1 {
   margin-top: 0; 
   padding-top: 20px; /* espace en haut */
 }
+
 
 .footer {
   position: fixed;
