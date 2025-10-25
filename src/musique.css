@@ -112,7 +112,7 @@
 
 @media (max-width: 768px) {
   .embla-musique__slide {
-    max-height: 25vh; /* scale size based on viewport height */
+    max-height: 40vh; /* scale size based on viewport height */
     width: auto;
     aspect-ratio: 1 / 1;
     border-radius: 16px;
