@@ -43,7 +43,15 @@ const CustomCursor = ({ hoverToggle }) => {
     };
   }, []);
 
-  const cursorSrc = isPointer || hoverToggle ? "frog-pointy.png" : "frog.png";
+  // Define individual cursor dimensions and offsets
+  const cursorSizes = {
+    "frog.webp": { width: 90, height: 90, offsetX: 40, offsetY: 40 },
+    "frog-pointy.webp": { width: 170, height: 80, offsetX: 127, offsetY: -50 },
+  };
+
+  // Determine which cursor to display
+  const cursorSrc = isPointer || hoverToggle ? "frog-pointy.webp" : "frog.webp";
+  const { width, height, offsetX, offsetY } = cursorSizes[cursorSrc];
 
   return (
     <img
@@ -53,9 +61,9 @@ const CustomCursor = ({ hoverToggle }) => {
         position: "fixed",
         left: position.x,
         top: position.y,
-        width: "80px",
-        height: "80px",
-        transform: "translate(-16px, -16px)",
+        width: `${width}px`,
+        height: `${height}px`,
+        transform: `translate(-${offsetX}px, -${offsetY}px)`,
         pointerEvents: "none",
         zIndex: 9999,
       }}
