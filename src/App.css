@@ -95,3 +95,15 @@ h1 {
   top: 50%;
   transform: translate(-50%, -50%);
 }
+
+.footer .carousel-button.prev,
+.footer .carousel-button.next {
+  /* No default hiding, only hide on mobile via media query below */
+}
+
+@media (max-width: 768px) {
+  .footer .carousel-button.prev,
+  .footer .carousel-button.next {
+    display: none;
+  }
+}
