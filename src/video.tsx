@@ -11,7 +11,7 @@ const slides = [
   { src: process.env.PUBLIC_URL + '/videos/gentil.mp4', title: 'Studio Gentil/Dessin anime', year: "2023", url: "https://www.instagram.com/p/Cg4jiuwjgiQ/" },
 ];
 
-const VideoCarousel = () => {
+const VideoCarousel = ({ setEmblaApi }) => {
   const [emblaRef, emblaApi] = useEmblaCarousel(
     {
       loop: true,
@@ -24,12 +24,14 @@ const VideoCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
-    if (!emblaApi) return;
-  
+    if (!emblaApi || !setEmblaApi) return;
+
+    setEmblaApi(emblaApi);
+
     const updateSlide = () => setCurrentSlide(emblaApi.selectedScrollSnap());
     emblaApi.on('select', updateSlide);
     updateSlide(); // initialize
-  }, [emblaApi]);
+  }, [emblaApi, setEmblaApi]);
 
   return (
     <>

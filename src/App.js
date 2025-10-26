@@ -10,6 +10,7 @@ function App() {
   const [activeSide, setActiveSide] = useState("musique");
   const [hoverToggle, setHoverToggle] = useState(false);
   const [musiqueEmblaApi, setMusiqueEmblaApi] = useState(null);
+  const [videoEmblaApi, setVideoEmblaApi] = useState(null);
 
   return (
     <>
@@ -23,15 +24,21 @@ function App() {
       {/*le big body*/}
       <div style={{ overflowX: "hidden", color: "white" }} className="App">
         {activeSide === "musique" && <Musique setEmblaApi={setMusiqueEmblaApi} />}
-        {activeSide === "video" && <Video />}
+        {activeSide === "video" && <Video setEmblaApi={setVideoEmblaApi} />}
       </div>
 
       {/*le menu*/}
       <footer className="footer">
         <ToggleSwitch activeSide={activeSide} setActiveSide={setActiveSide} setHoverToggle={setHoverToggle} />
         <Buttons
-          onPrev={() => musiqueEmblaApi && musiqueEmblaApi.scrollPrev()}
-          onNext={() => musiqueEmblaApi && musiqueEmblaApi.scrollNext()}
+          onPrev={() => {
+            if (activeSide === "musique") musiqueEmblaApi?.scrollPrev();
+            else if (activeSide === "video") videoEmblaApi?.scrollPrev();
+          }}
+          onNext={() => {
+            if (activeSide === "musique") musiqueEmblaApi?.scrollNext();
+            else if (activeSide === "video") videoEmblaApi?.scrollNext();
+          }}
         />
       </footer>
     </>
