@@ -3,6 +3,7 @@ import "./App.css";
 import Musique from "./musique.tsx";
 import Video from "./video.tsx";
 import ToggleSwitch from "./ToggleSwitch";
+import CustomCursor from "./CustomCursor";
 
 function App() {
   const [activeSide, setActiveSide] = useState("musique");
@@ -13,6 +14,8 @@ function App() {
       <header className="header">
         <h1>Hugo Borel</h1>
       </header>
+
+      <CustomCursor />
 
       {/*le big body*/}
       <body style={{ overflowX: "hidden", color: "white" }}>

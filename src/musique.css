@@ -48,6 +48,15 @@
   border-radius: 16px;
 }
 
+/* Make carousel slides and their contents trigger pointer cursor for the custom frog */
+.embla-musique__slide,
+.embla-musique__slide a,
+.embla-musique__slide img,
+.embla-musique__slide:hover,
+.embla-musique__slide:active {
+  cursor: pointer;
+}
+
 .embla-musique__slide:active {
   cursor: grabbing;
 }
