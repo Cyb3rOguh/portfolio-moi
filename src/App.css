@@ -73,6 +73,7 @@ h1 {
   align-items: center;
   justify-content: center;
   text-align: center;
+  padding-bottom: 20px;
 }
 
 .footer .carousel-button.prev {
@@ -96,9 +97,25 @@ h1 {
   transform: translate(-50%, -50%);
 }
 
+/* Style carousel buttons in footer: round, blue, centered text */
 .footer .carousel-button.prev,
 .footer .carousel-button.next {
-  /* No default hiding, only hide on mobile via media query below */
+  border-radius: 0%; /* make buttons round */
+  
+  background-color: transparent;
+  width: 90px; /* square width */
+  height: 90px; /* square height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.2s ease; /* add smooth transition */
+}
+
+.footer .carousel-button.prev:active,
+.footer .carousel-button.next:active {
+  transform: scale(1);
 }
 
 @media (max-width: 768px) {

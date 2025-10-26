@@ -5,10 +5,10 @@ const Buttons = ({ onNext, onPrev }) => {
   return (
     <div className="carousel-buttons">
       <button className="carousel-button prev" onClick={onPrev}>
-        ‹ Prev
+        <img src={`${process.env.PUBLIC_URL}/tennis.webp`} alt="Prev" />
       </button>
       <button className="carousel-button next" onClick={onNext}>
-        Next ›
+        <img src={`${process.env.PUBLIC_URL}/tennis.webp`} alt="Next" />
       </button>
     </div>
   );
