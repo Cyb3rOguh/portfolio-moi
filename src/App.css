@@ -57,10 +57,12 @@ h1 {
   padding-top: 20px; /* espace en haut */
 }
 
-body {
-  cursor: none;
-}
 
+
+/* Hide system cursor everywhere */
+* {
+  cursor: none !important;
+}
 
 .footer {
   position: fixed;

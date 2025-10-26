@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const CustomCursor = () => {
+const CustomCursor = ({ hoverToggle }) => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isPointer, setIsPointer] = useState(false);
 
@@ -11,11 +11,24 @@ const CustomCursor = () => {
 
     const handleMouseOver = (e) => {
       const target = e.target;
-      const computedCursor = window.getComputedStyle(target).cursor;
-      setIsPointer(computedCursor === "pointer");
+      if (!(target instanceof Element)) {
+        setIsPointer(false);
+        return;
+      }
+      const tag = target.tagName.toLowerCase();
+      const isInteractive =
+        tag === "a" ||
+        tag === "button" ||
+        tag === "input" ||
+        tag === "select" ||
+        tag === "textarea" ||
+        target.getAttribute("role") === "button" ||
+        target.closest("a, button, [role='button']") ||
+        target.classList.contains("toggle-option");
+      setIsPointer(!!isInteractive);
     };
 
-    const handleMouseOut = (e) => {
+    const handleMouseOut = () => {
       setIsPointer(false);
     };
 
@@ -30,9 +43,11 @@ const CustomCursor = () => {
     };
   }, []);
 
+  const cursorSrc = isPointer || hoverToggle ? "frog-pointy.png" : "frog.png";
+
   return (
     <img
-      src={`${process.env.PUBLIC_URL}/${isPointer ? "frog-pointy.png" : "frog.png"}`}
+      src={`${process.env.PUBLIC_URL}/${cursorSrc}`}
       alt="frog cursor"
       style={{
         position: "fixed",
@@ -40,8 +55,8 @@ const CustomCursor = () => {
         top: position.y,
         width: "80px",
         height: "80px",
-        transform: "translate(-16px, -16px)", // adjust hotspot
-        pointerEvents: "none", // ignore clicks
+        transform: "translate(-16px, -16px)",
+        pointerEvents: "none",
         zIndex: 9999,
       }}
     />
