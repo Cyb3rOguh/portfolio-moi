@@ -4,7 +4,6 @@ import Musique from "./musique.tsx";
 import Video from "./video.tsx";
 import ToggleSwitch from "./ToggleSwitch";
 import CustomCursor from "./CustomCursor";
-import Buttons from './Buttons';
 
 function App() {
   const [activeSide, setActiveSide] = useState("musique");
@@ -29,17 +28,27 @@ function App() {
 
       {/*le menu*/}
       <footer className="footer">
-        <ToggleSwitch activeSide={activeSide} setActiveSide={setActiveSide} setHoverToggle={setHoverToggle} />
-        <Buttons
-          onPrev={() => {
+        <button
+          className="carousel-button prev"
+          onClick={() => {
             if (activeSide === "musique") musiqueEmblaApi?.scrollPrev();
             else if (activeSide === "video") videoEmblaApi?.scrollPrev();
           }}
-          onNext={() => {
+        >
+          ‹ Prev
+        </button>
+
+        <ToggleSwitch activeSide={activeSide} setActiveSide={setActiveSide} setHoverToggle={setHoverToggle} />
+
+        <button
+          className="carousel-button next"
+          onClick={() => {
             if (activeSide === "musique") musiqueEmblaApi?.scrollNext();
             else if (activeSide === "video") videoEmblaApi?.scrollNext();
           }}
-        />
+        >
+          Next ›
+        </button>
       </footer>
     </>
   );
