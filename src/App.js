@@ -4,11 +4,12 @@ import Musique from "./musique.tsx";
 import Video from "./video.tsx";
 import ToggleSwitch from "./ToggleSwitch";
 import CustomCursor from "./CustomCursor";
+import Buttons from './Buttons';
 
 function App() {
   const [activeSide, setActiveSide] = useState("musique");
-
   const [hoverToggle, setHoverToggle] = useState(false);
+  const [musiqueEmblaApi, setMusiqueEmblaApi] = useState(null);
 
   return (
     <>
@@ -20,17 +21,18 @@ function App() {
       <CustomCursor hoverToggle={hoverToggle} />
 
       {/*le big body*/}
-      <body style={{ overflowX: "hidden", color: "white" }}>
-        <div className="App">
-          {activeSide === "musique" && <Musique />}
-          {activeSide === "video" && <Video />}
-        </div>
-      </body>
+      <div style={{ overflowX: "hidden", color: "white" }} className="App">
+        {activeSide === "musique" && <Musique setEmblaApi={setMusiqueEmblaApi} />}
+        {activeSide === "video" && <Video />}
+      </div>
 
-      
       {/*le menu*/}
       <footer className="footer">
         <ToggleSwitch activeSide={activeSide} setActiveSide={setActiveSide} setHoverToggle={setHoverToggle} />
+        <Buttons
+          onPrev={() => musiqueEmblaApi && musiqueEmblaApi.scrollPrev()}
+          onNext={() => musiqueEmblaApi && musiqueEmblaApi.scrollNext()}
+        />
       </footer>
     </>
   );
