@@ -36,6 +36,11 @@ function App() {
             else if (activeSide === "video") videoEmblaApi?.scrollPrev();
           }}
         >
+          <img
+            src={`${process.env.PUBLIC_URL}/tennis.webp`}
+            alt="Prev"
+            style={{ width: "80px", height: "80px", transform: "scaleX(-1)" }}
+          />
         </button>
 
         <ToggleSwitch activeSide={activeSide} setActiveSide={setActiveSide} setHoverToggle={setHoverToggle} />
@@ -48,6 +53,11 @@ function App() {
             else if (activeSide === "video") videoEmblaApi?.scrollNext();
           }}
         >
+          <img
+            src={`${process.env.PUBLIC_URL}/tennis.webp`}
+            alt="Next"
+            style={{ width: "80px", height: "80px" }}
+          />
         </button>
       </footer>
     </>

@@ -97,7 +97,7 @@ h1 {
 .footer .carousel-button.next {
   border-radius: 50%; /* make buttons round */
   
-  background-color: blue;
+  background-color: transparent;
   width: 90px; /* square width */
   height: 90px; /* square height */
   display: flex;
@@ -105,6 +105,12 @@ h1 {
   justify-content: center;
   cursor: pointer;
   border: none;
+}
+
+.footer .carousel-button.prev img,
+.footer .carousel-button.next img {
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
 }
 
 
