@@ -43,7 +43,7 @@ h1 {
   align-items: flex-start; /* pushes text to the top */
   justify-content: center; /* center horizontally */
   text-align: center;
-  z-index: 10;
+  z-index: 0;
   color: #102542;
   background-color: #EEE82C;
 }
@@ -54,7 +54,7 @@ h1 {
   font-size: 4rem;
   align-self: flex-start; 
   margin-top: 0; 
-  padding-top: 20px; /* espace en haut */
+  padding-top: 20px; /* espace en haut */;
 }
 
 
