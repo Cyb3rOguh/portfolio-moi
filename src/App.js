@@ -30,6 +30,7 @@ function App() {
       <footer className="footer">
         <button
           className="carousel-button prev"
+          title="Précédent"
           onClick={() => {
             if (activeSide === "musique") musiqueEmblaApi?.scrollPrev();
             else if (activeSide === "video") videoEmblaApi?.scrollPrev();
@@ -42,6 +43,7 @@ function App() {
 
         <button
           className="carousel-button next"
+          title="Prochain"
           onClick={() => {
             if (activeSide === "musique") musiqueEmblaApi?.scrollNext();
             else if (activeSide === "video") videoEmblaApi?.scrollNext();
