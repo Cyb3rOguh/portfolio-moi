@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import Musique from "./musique.tsx";
 import Video from "./video.tsx";
@@ -10,6 +10,29 @@ function App() {
   const [hoverToggle, setHoverToggle] = useState(false);
   const [musiqueEmblaApi, setMusiqueEmblaApi] = useState(null);
   const [videoEmblaApi, setVideoEmblaApi] = useState(null);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+  const [preloadedSides, setPreloadedSides] = useState({
+    musique: true,
+    video: false,
+  });
+
+  // Preload the inactive side after initial render
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setPreloadedSides({ musique: true, video: true });
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  const handleToggle = (newSide) => {
+    if (newSide !== activeSide) {
+      setIsTransitioning(true);
+      setTimeout(() => {
+        setActiveSide(newSide);
+        setTimeout(() => setIsTransitioning(false), 50);
+      }, 300);
+    }
+  };
 
   return (
     <>
@@ -17,15 +40,30 @@ function App() {
       <header className="header">
         <h1>Hugo Borel</h1>
       </header>
-
       <CustomCursor hoverToggle={hoverToggle} />
-
       {/*le big body*/}
       <div style={{ overflowX: "hidden", color: "white" }} className="App">
-        {activeSide === "musique" && <Musique setEmblaApi={setMusiqueEmblaApi} />}
-        {activeSide === "video" && <Video setEmblaApi={setVideoEmblaApi} />}
-      </div>
+        {/* Active content */}
+        <div
+          style={{
+            opacity: isTransitioning ? 0 : 1,
+            transition: "opacity 0.3s ease-in-out",
+          }}
+        >
+          {activeSide === "musique" && <Musique setEmblaApi={setMusiqueEmblaApi} />}
+          {activeSide === "video" && <Video setEmblaApi={setVideoEmblaApi} />}
+        </div>
 
+        {/* Preloaded content (hidden) */}
+        <div style={{ display: "none" }}>
+          {preloadedSides.musique && activeSide !== "musique" && (
+            <Musique setEmblaApi={() => {}} />
+          )}
+          {preloadedSides.video && activeSide !== "video" && (
+            <Video setEmblaApi={() => {}} />
+          )}
+        </div>
+      </div>
       {/*le menu*/}
       <footer className="footer">
         <button
@@ -42,9 +80,11 @@ function App() {
             style={{ width: "80px", height: "80px", transform: "scaleX(-1)" }}
           />
         </button>
-
-        <ToggleSwitch activeSide={activeSide} setActiveSide={setActiveSide} setHoverToggle={setHoverToggle} />
-
+        <ToggleSwitch 
+          activeSide={activeSide} 
+          setActiveSide={handleToggle} 
+          setHoverToggle={setHoverToggle} 
+        />
         <button
           className="carousel-button next"
           title="Prochain"
