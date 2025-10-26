@@ -90,19 +90,14 @@ h1 {
   transform: translateY(-50%);
 }
 
-.footer .toggle-switch-wrapper {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
+
 
 /* Style carousel buttons in footer: round, blue, centered text */
 .footer .carousel-button.prev,
 .footer .carousel-button.next {
-  border-radius: 0%; /* make buttons round */
+  border-radius: 50%; /* make buttons round */
   
-  background-color: transparent;
+  background-color: blue;
   width: 90px; /* square width */
   height: 90px; /* square height */
   display: flex;
@@ -110,13 +105,8 @@ h1 {
   justify-content: center;
   cursor: pointer;
   border: none;
-  transition: transform 0.2s ease; /* add smooth transition */
 }
 
-.footer .carousel-button.prev:active,
-.footer .carousel-button.next:active {
-  transform: scale(1);
-}
 
 @media (max-width: 768px) {
   .footer .carousel-button.prev,
