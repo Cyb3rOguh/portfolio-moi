@@ -4,9 +4,9 @@ import PropTypes from "prop-types";
 
 const ToggleSwitch = ({ activeSide, setActiveSide, setHoverToggle }) => {
   const options = [
-    { value: "musique", label: "Musique" },
-    { value: "video", label: "Vidéo" },
-    { value: "livre", label: "Livre" },
+    { value: "musique", label: "Musique", className: "toggle-button--musique" },
+    { value: "video", label: "Vidéo", className: "toggle-button--video" },
+    { value: "livre", label: "Livre", className: "toggle-button--livre" },
   ];
 
   return (
@@ -14,7 +14,7 @@ const ToggleSwitch = ({ activeSide, setActiveSide, setHoverToggle }) => {
       {options.map((option) => (
         <button
           key={option.value}
-          className={`toggle-button ${activeSide === option.value ? "active" : ""}`}
+          className={`toggle-button ${option.className} ${activeSide === option.value ? "active" : ""}`}
           onClick={() => setActiveSide(option.value)}
           onMouseEnter={() => setHoverToggle(true)}
           onMouseLeave={() => setHoverToggle(false)}
