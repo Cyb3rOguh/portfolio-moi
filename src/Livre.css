@@ -1,0 +1,48 @@
+.livre-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw; /* 👈 Force la largeur à 100% de la fenêtre */
+  max-width: 1000px;
+  height: 80vh;
+  border: #9ab414 2px solid; /* 👈 Ajouté une bordure pour éviter le débordement */
+  box-sizing: border-box; /* 👈 Déjà présent — bon */
+  position: relative;
+  padding: 0; /* 👈 Supprimez le padding pour éviter les débordements */
+  margin: 0; /* 👈 Ajoutez ceci pour éviter les marges externes */
+}
+
+.centered-image {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+}
+
+
+
+.buy-button {
+  position: absolute;
+  right: 10px; /* 👈 Décalé de 10px pour tenir compte de la border */
+  top: 50%;
+  transform: translateY(-50%);
+  background: #e4ff4b;
+  color: rgb(0, 0, 0);
+  height: 44px;
+  font-family: 'ArialNarrow', monospace;
+  font-size: 1.1rem;
+  padding: 0px 30px;
+  border: 2px solid black;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  white-space: nowrap;
+}
+
+.buy-button:hover {
+  background: #9ab414;
+  transform: translateY(-50%) scale(1.05);
+}
+
+.buy-button:active {
+  transform: translateY(-50%) scale(1);
+}

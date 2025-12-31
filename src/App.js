@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import Musique from "./musique.tsx";
 import Video from "./video.tsx";
+import Livre from "./livre.tsx";
 import ToggleSwitch from "./ToggleSwitch";
 import CustomCursor from "./CustomCursor";
 
@@ -14,12 +15,13 @@ function App() {
   const [preloadedSides, setPreloadedSides] = useState({
     musique: true,
     video: false,
+    livre: false, 
   });
 
   // Preload the inactive side after initial render
   useEffect(() => {
     const timer = setTimeout(() => {
-      setPreloadedSides({ musique: true, video: true });
+      setPreloadedSides({ musique: true, video: true, livre: true }); // 👈 Préchargez tout
     }, 1000);
     return () => clearTimeout(timer);
   }, []);
@@ -52,6 +54,7 @@ function App() {
         >
           {activeSide === "musique" && <Musique setEmblaApi={setMusiqueEmblaApi} />}
           {activeSide === "video" && <Video setEmblaApi={setVideoEmblaApi} />}
+          {activeSide === "livre" && <Livre />} {/* 👈 Affichez Livre ici */}
         </div>
 
         {/* Preloaded content (hidden) */}
@@ -61,6 +64,9 @@ function App() {
           )}
           {preloadedSides.video && activeSide !== "video" && (
             <Video setEmblaApi={() => {}} />
+          )}
+          {preloadedSides.livre && activeSide !== "livre" && (
+            <Livre /> // 👈 Préchargez Livre ici
           )}
         </div>
       </div>
@@ -72,6 +78,8 @@ function App() {
           onClick={() => {
             if (activeSide === "musique") musiqueEmblaApi?.scrollPrev();
             else if (activeSide === "video") videoEmblaApi?.scrollPrev();
+            // 👇 Ajoutez cette ligne pour Livre (si vous avez un Embla dedans)
+            // else if (activeSide === "livre") livreEmblaApi?.scrollPrev();
           }}
         >
           <img
@@ -80,10 +88,10 @@ function App() {
             style={{ width: "80px", height: "80px", transform: "scaleX(-1)" }}
           />
         </button>
-        <ToggleSwitch 
-          activeSide={activeSide} 
-          setActiveSide={handleToggle} 
-          setHoverToggle={setHoverToggle} 
+        <ToggleSwitch
+          activeSide={activeSide}
+          setActiveSide={handleToggle}
+          setHoverToggle={setHoverToggle}
         />
         <button
           className="carousel-button next"
@@ -91,6 +99,8 @@ function App() {
           onClick={() => {
             if (activeSide === "musique") musiqueEmblaApi?.scrollNext();
             else if (activeSide === "video") videoEmblaApi?.scrollNext();
+            // 👇 Ajoutez cette ligne pour Livre (si vous avez un Embla dedans)
+            // else if (activeSide === "livre") livreEmblaApi?.scrollNext();
           }}
         >
           <img
