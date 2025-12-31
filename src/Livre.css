@@ -24,7 +24,7 @@
 
 .buy-button {
   position: absolute;
-  right: 0px; /* 👈 Décalé de 10px pour tenir compte de la border */
+  right: 32px; /* 👈 Décalé de 10px pour tenir compte de la border */
   top: 50%;
   transform: translateY(-50%);
   background: #FBF02C;
@@ -32,7 +32,7 @@
   height: 44px;
   font-family: 'ArialNarrow', monospace;
   font-size: 1.1rem;
-  padding: 0px 30px;
+  padding: 0px 28px;
   border: 2px solid black;
   border-radius: 20px;
   cursor: pointer;
@@ -56,4 +56,47 @@
   padding: 0;
   word-wrap: break-word;
   line-height: 1.4;
+}
+
+/* 👇 Sur petits écrans : placer le bouton sous l'image et centrer le titre */
+@media (max-width: 904px) {
+  .livre-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .buy-button {
+    position: static;
+    right: auto;
+    bottom: 12px;
+    transform: none;
+    margin-bottom: 12px;
+    max-width: 300px;
+  }
+
+  .title-container {
+    width: 100%;
+    max-width: 80%;
+    text-align: center; /* 👈 Centre le texte à l'intérieur */
+  }
+
+  .book-title {
+    position: static;
+    bottom: auto;
+    left: auto;
+    transform: none;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    color: #000000;
+    text-align: center; /* 👈 Centre le texte */
+    word-wrap: break-word;
+    line-height: 1.4;
+    display: block; /* 👈 Pour que text-align fonctionne */
+  }
+
+  .centered-image {
+    max-height: 60vh;
+  }
 }
