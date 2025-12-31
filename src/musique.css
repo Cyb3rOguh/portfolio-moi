@@ -36,8 +36,8 @@
 .embla-musique__slide {
   flex: 0 0 auto;
   min-width: 0;
-  max-height: 600px;
-  aspect-ratio: 1 / 1; /* always square */
+  max-height: 60vh; /* ✅ Appliqué partout */
+  aspect-ratio: 1 / 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
