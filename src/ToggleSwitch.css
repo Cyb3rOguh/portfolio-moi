@@ -8,22 +8,25 @@
   .toggle-container {
   display: inline-flex;
   position: relative;
-  width: 450px; /* 3 options × 150px (148 + 2) = 450px — ajustez si besoin */
+  width: 450px;
   height: 44px;
   background: #102542;
   border-radius: 25px;
   cursor: pointer;
-  
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 0 2px; /* 👈 Ajoute 2px de marge interne à gauche/droite */
 }
 
 .toggle-thumb {
   position: absolute;
   top: 2px;
-  width: 148px;
+  width: 144px; /* 👈 Réduit pour laisser de l'espace */
   height: 40px;
   background: #adc116;
   border-radius: 25px;
   transition: left 0.3s;
+  z-index: 0;
 }
 
 .toggle-option {
@@ -36,14 +39,15 @@
   font-family: 'ArialNarrow', monospace;
   letter-spacing: inherit;
   font-size: 1.2rem;
-  background: none;
   border: none;
+  background: none;
   padding: 0;
   margin: 0;
   cursor: pointer;
 }
 
+
+
 .toggle-option.active {
   color: white;
 }
-
