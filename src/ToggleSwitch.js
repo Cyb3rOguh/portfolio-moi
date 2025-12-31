@@ -3,35 +3,25 @@ import "./ToggleSwitch.css";
 import PropTypes from "prop-types";
 
 const ToggleSwitch = ({ activeSide, setActiveSide, setHoverToggle }) => {
-  const options = ["musique", "video", "livre"];
-  const thumbWidth = 144; // 👈 Réduit de 148 → 144 pour laisser de l'espace
-  const gap = 2;
-  const padding = 2; // 👈 Marge interne à gauche/droite
-
-  const activeIndex = options.indexOf(activeSide);
-
-  // 👇 Chaque bouton = 150px → le thumb doit être centré dans 150px
-  // On laisse 2px de marge de chaque côté → thumb = 144px
-  const buttonWidth = 153;
-  const leftPosition = activeIndex * buttonWidth + padding; // +2 pour la marge gauche
+  const options = [
+    { value: "musique", label: "Musique" },
+    { value: "video", label: "Vidéo" },
+    { value: "livre", label: "Livre" },
+  ];
 
   return (
     <div className="toggle-container">
-      <div
-        className="toggle-thumb"
-        style={{ left: `${leftPosition}px`, width: `${thumbWidth}px` }}
-      />
       {options.map((option) => (
         <button
-          key={option}
-          className={`toggle-option ${activeSide === option ? "active" : ""}`}
-          onClick={() => setActiveSide(option)}
+          key={option.value}
+          className={`toggle-button ${activeSide === option.value ? "active" : ""}`}
+          onClick={() => setActiveSide(option.value)}
           onMouseEnter={() => setHoverToggle(true)}
           onMouseLeave={() => setHoverToggle(false)}
           type="button"
-          aria-pressed={activeSide === option}
+          aria-pressed={activeSide === option.value}
         >
-          {option.charAt(0).toUpperCase() + option.slice(1)}
+          {option.label}
         </button>
       ))}
     </div>
