@@ -1,5 +1,6 @@
 import React from "react";
 import "./ToggleSwitch.css";
+import PropTypes from "prop-types"; // 👈 Ajoutez cette ligne
 
 const ToggleSwitch = ({ activeSide, setActiveSide, setHoverToggle }) => {
   const options = ["musique", "video", "livre"];
@@ -22,7 +23,6 @@ const ToggleSwitch = ({ activeSide, setActiveSide, setHoverToggle }) => {
           onClick={() => setActiveSide(option)}
           onMouseEnter={() => setHoverToggle(true)}
           onMouseLeave={() => setHoverToggle(false)}
-          // Pour l'accessibilité : rôle et gestion du focus
           type="button"
           aria-pressed={activeSide === option}
         >
@@ -31,6 +31,13 @@ const ToggleSwitch = ({ activeSide, setActiveSide, setHoverToggle }) => {
       ))}
     </div>
   );
+};
+
+// 👇 Validation des props
+ToggleSwitch.propTypes = {
+  activeSide: PropTypes.string.isRequired,
+  setActiveSide: PropTypes.func.isRequired,
+  setHoverToggle: PropTypes.func.isRequired,
 };
 
 export default ToggleSwitch;
