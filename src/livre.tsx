@@ -13,13 +13,18 @@ const Livre = () => {
       {/* Conteneur pour centrer le titre */}
       <div className="title-container">
         <span className="book-title">
-          TAPER/Livre pour enfants/Illustration et ecriture/2026
+          TAPER / Livre pour enfants / Illustration et écriture / 2026
         </span>
       </div>
-      {/* Bouton à droite */}
-      <button className="buy-button">
+      {/* Bouton à droite — maintenant un lien qui ouvre dans un nouvel onglet */}
+      <a
+        href="https://payhip.com/b/oqUf4"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="buy-button"
+      >
         Commander
-      </button>
+      </a>
     </div>
   );
 };

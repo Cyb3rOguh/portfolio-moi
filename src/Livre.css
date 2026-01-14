@@ -23,21 +23,40 @@
 
 
 .buy-button {
-  position: absolute;
-  right: 32px; /* 👈 Décalé de 10px pour tenir compte de la border */
-  top: 50%;
-  transform: translateY(-50%);
-  background: #FBF02C;
-  color: rgb(0, 0, 0);
+  position: static;
+  right: auto;
+  bottom: 12px;
+  transform: none;
+  margin-bottom: 12px;
+  max-width: 300px;
+
+  /* 👇 Styles pour centrer le texte verticalement */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 44px;
-  font-family: 'ArialNarrow', monospace;
-  font-size: 1.1rem;
-  padding: 0px 28px;
+  padding: 0 30px;
+
+  /* 👇 Forcer le style sur le lien */
+  text-decoration: none; /* 👈 Supprime le souligné */
+  color: #000000; /* 👈 Hérite de la couleur définie (noir ici) */
+  background: #FBF02C;
   border: 2px solid black;
   border-radius: 20px;
+  font-family: 'ArialNarrow', monospace;
+  font-size: 1.1rem;
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease;
   white-space: nowrap;
+
+  /* 👇 Pour les états hover/active */
+  &:hover {
+    background: #FBF02C;
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
 }
 
 .buy-button:hover {
@@ -67,13 +86,41 @@
   }
 
   .buy-button {
-    position: static;
-    right: auto;
-    bottom: 12px;
-    transform: none;
-    margin-bottom: 12px;
-    max-width: 300px;
+  position: static;
+  right: auto;
+  bottom: 12px;
+  transform: none;
+  margin-bottom: 12px;
+  max-width: 300px;
+
+  /* 👇 Styles pour centrer le texte verticalement */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px; /* 👈 Hauteur fixe pour centrer verticalement */
+  padding: 0 30px;
+
+  /* 👇 Supprimer la décoration du lien */
+  text-decoration: none;
+  color: inherit; /* 👈 Hérite de la couleur définie dans le CSS */
+  background: #FBF02C;
+  border: 2px solid black;
+  border-radius: 20px;
+  font-family: 'ArialNarrow', monospace;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  white-space: nowrap;
+
+  /* 👇 Pour les états hover/active */
+  &:hover {
+    background: #FBF02C;
   }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
 
   .title-container {
     width: 100%;
