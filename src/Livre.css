@@ -19,9 +19,7 @@
   transition: transform 0.3s ease;
 }
 
-.centered-image:hover {
-  transform: scale(1.02);
-}
+
 
 .book-title {
   position: absolute;
