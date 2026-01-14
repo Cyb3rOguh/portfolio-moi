@@ -72,43 +72,52 @@ function App() {
       </div>
       {/*le menu*/}
       <footer className="footer">
-        <button
-          className="carousel-button prev"
-          title="Précédent"
-          onClick={() => {
-            if (activeSide === "musique") musiqueEmblaApi?.scrollPrev();
-            else if (activeSide === "video") videoEmblaApi?.scrollPrev();
-            // 👇 Ajoutez cette ligne pour Livre (si vous avez un Embla dedans)
-            // else if (activeSide === "livre") livreEmblaApi?.scrollPrev();
-          }}
-        >
-          <img
-            src={`${process.env.PUBLIC_URL}/tennis.webp`}
-            alt="Prev"
-            style={{ width: "80px", height: "80px", transform: "scaleX(-1)" }}
-          />
-        </button>
+        {/* 👇 Bouton "Précédent" — masqué sur "livre" */}
+        {activeSide !== "livre" && (
+          <button
+            className="carousel-button prev"
+            title="Précédent"
+            onClick={() => {
+              if (activeSide === "musique") musiqueEmblaApi?.scrollPrev();
+              else if (activeSide === "video") videoEmblaApi?.scrollPrev();
+              // 👇 Ajoutez cette ligne pour Livre (si vous avez un Embla dedans)
+              // else if (activeSide === "livre") livreEmblaApi?.scrollPrev();
+            }}
+          >
+            <img
+              src={`${process.env.PUBLIC_URL}/tennis.webp`}
+              alt="Prev"
+              style={{ width: "80px", height: "80px", transform: "scaleX(-1)" }}
+            />
+          </button>
+        )}
+
+        {/* 👇 ToggleSwitch — toujours visible */}
         <ToggleSwitch
           activeSide={activeSide}
           setActiveSide={handleToggle}
           setHoverToggle={setHoverToggle}
         />
-        <button
-          className="carousel-button next"
-          title="Prochain"
-          onClick={() => {
-            if (activeSide === "musique") musiqueEmblaApi?.scrollNext();
-            else if (activeSide === "video") videoEmblaApi?.scrollNext();
-            // 👇 Ajoutez cette ligne pour Livre (si vous avez un Embla dedans)
-            // else if (activeSide === "livre") livreEmblaApi?.scrollNext();
-          }}
-        >
-          <img
-            src={`${process.env.PUBLIC_URL}/tennis.webp`}
-            alt="Next"
-            style={{ width: "80px", height: "80px" }}
-          />
-        </button>
+
+        {/* 👇 Bouton "Suivant" — masqué sur "livre" */}
+        {activeSide !== "livre" && (
+          <button
+            className="carousel-button next"
+            title="Prochain"
+            onClick={() => {
+              if (activeSide === "musique") musiqueEmblaApi?.scrollNext();
+              else if (activeSide === "video") videoEmblaApi?.scrollNext();
+              // 👇 Ajoutez cette ligne pour Livre (si vous avez un Embla dedans)
+              // else if (activeSide === "livre") livreEmblaApi?.scrollNext();
+            }}
+          >
+            <img
+              src={`${process.env.PUBLIC_URL}/tennis.webp`}
+              alt="Next"
+              style={{ width: "80px", height: "80px" }}
+            />
+          </button>
+        )}
       </footer>
     </>
   );
