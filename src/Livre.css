@@ -23,23 +23,21 @@
 
 
 .buy-button {
-  position: static;
-  right: auto;
-  bottom: 12px;
-  transform: none;
-  margin-bottom: 12px;
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 10;
+  top: 50%;
   max-width: 300px;
 
-  /* 👇 Styles pour centrer le texte verticalement */
   display: flex;
   align-items: center;
   justify-content: center;
   height: 44px;
   padding: 0 30px;
 
-  /* 👇 Forcer le style sur le lien */
-  text-decoration: none; /* 👈 Supprime le souligné */
-  color: #000000; /* 👈 Hérite de la couleur définie (noir ici) */
+  text-decoration: none;
+  color: #000000;
   background: #FBF02C;
   border: 2px solid black;
   border-radius: 20px;
@@ -48,15 +46,6 @@
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease;
   white-space: nowrap;
-
-  /* 👇 Pour les états hover/active */
-  &:hover {
-    background: #FBF02C;
-  }
-
-  &:active {
-    transform: scale(0.98);
-  }
 }
 
 .buy-button:hover {
@@ -86,46 +75,46 @@
   }
 
   .buy-button {
-  position: static;
-  right: auto;
-  bottom: 12px;
-  transform: none;
-  margin-bottom: 12px;
-  max-width: 300px;
+    position: static;
+    right: auto;
+    bottom: 12px;
+    transform: none;
+    margin-bottom: 12px;
+    max-width: 300px;
 
-  /* 👇 Styles pour centrer le texte verticalement */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 44px; /* 👈 Hauteur fixe pour centrer verticalement */
-  padding: 0 30px;
+    /* 👇 Styles pour centrer le texte verticalement */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    padding: 0 30px;
 
-  /* 👇 Supprimer la décoration du lien */
-  text-decoration: none;
-  color: inherit; /* 👈 Hérite de la couleur définie dans le CSS */
-  background: #FBF02C;
-  border: 2px solid black;
-  border-radius: 20px;
-  font-family: 'ArialNarrow', monospace;
-  font-size: 1.1rem;
-  cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease;
-  white-space: nowrap;
-
-  /* 👇 Pour les états hover/active */
-  &:hover {
+    /* 👇 Forcer le style sur le lien */
+    text-decoration: none;
+    color: #000000; /* 👈 Texte noir — pas inherit ! */
     background: #FBF02C;
-  }
+    border: 2px solid black;
+    border-radius: 20px;
+    font-family: 'ArialNarrow', monospace;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    white-space: nowrap;
 
-  &:active {
-    transform: scale(0.98);
+    /* 👇 Pour les états hover/active */
+    &:hover {
+      background: #FBF02C;
+    }
+
+    &:active {
+      transform: scale(0.98);
+    }
   }
-}
 
   .title-container {
     width: 100%;
     max-width: 80%;
-    text-align: center; /* 👈 Centre le texte à l'intérieur */
+    text-align: center;
   }
 
   .book-title {
@@ -137,10 +126,10 @@
     margin-bottom: 20px;
     font-size: 1.2rem;
     color: #000000;
-    text-align: center; /* 👈 Centre le texte */
+    text-align: center;
     word-wrap: break-word;
     line-height: 1.4;
-    display: block; /* 👈 Pour que text-align fonctionne */
+    display: block;
   }
 
   .centered-image {
