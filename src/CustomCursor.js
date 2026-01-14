@@ -61,8 +61,8 @@ const CustomCursor = ({ hoverToggle }) => {
 
   // Define individual cursor dimensions and offsets
   const cursorSizes = {
-    "frog.webp": { width: 90, height: 90, offsetX: 40, offsetY: 40 },
-    "frog-pointy.webp": { width: 170, height: 80, offsetX: 127, offsetY: -50 },
+    "frog.webp": { width: 80, height: 80, offsetX: 40, offsetY: 40 },
+    "frog-pointy.webp": { width: 160, height: 70, offsetX: 127, offsetY: -50 },
   };
 
   // Determine which cursor to display

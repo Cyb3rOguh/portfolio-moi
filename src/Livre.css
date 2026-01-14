@@ -1,0 +1,149 @@
+.livre-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw; /* 👈 Force la largeur à 100% de la fenêtre */
+  max-width: 1100px;
+  height: 80vh;
+  max-height: 800px;
+  /*border: #9ab414 2px solid;*/
+  
+  box-sizing: border-box; /* 👈 Déjà présent — bon */
+  position: relative;
+  padding: 0; /* 👈 Supprimez le padding pour éviter les débordements */
+  margin: 0; /* 👈 Ajoutez ceci pour éviter les marges externes */
+}
+
+.centered-image {
+  max-width: 100%;
+  max-height: 95vh;
+  object-fit: contain;
+}
+
+
+
+.buy-button {
+  position: static;
+  right: auto;
+  bottom: 12px;
+  transform: none;
+  margin-bottom: 12px;
+  max-width: 300px;
+
+  /* 👇 Styles pour centrer le texte verticalement */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  padding: 0 30px;
+
+  /* 👇 Forcer le style sur le lien */
+  text-decoration: none; /* 👈 Supprime le souligné */
+  color: #000000; /* 👈 Hérite de la couleur définie (noir ici) */
+  background: #FBF02C;
+  border: 2px solid black;
+  border-radius: 20px;
+  font-family: 'ArialNarrow', monospace;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  white-space: nowrap;
+
+  /* 👇 Pour les états hover/active */
+  &:hover {
+    background: #FBF02C;
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+.buy-button:hover {
+  background: #FBF02C;
+}
+
+.book-title {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.2rem;
+  color: #000000;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  word-wrap: break-word;
+  line-height: 1.4;
+}
+
+/* 👇 Sur petits écrans : placer le bouton sous l'image et centrer le titre */
+@media (max-width: 904px) {
+  .livre-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .buy-button {
+  position: static;
+  right: auto;
+  bottom: 12px;
+  transform: none;
+  margin-bottom: 12px;
+  max-width: 300px;
+
+  /* 👇 Styles pour centrer le texte verticalement */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px; /* 👈 Hauteur fixe pour centrer verticalement */
+  padding: 0 30px;
+
+  /* 👇 Supprimer la décoration du lien */
+  text-decoration: none;
+  color: inherit; /* 👈 Hérite de la couleur définie dans le CSS */
+  background: #FBF02C;
+  border: 2px solid black;
+  border-radius: 20px;
+  font-family: 'ArialNarrow', monospace;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  white-space: nowrap;
+
+  /* 👇 Pour les états hover/active */
+  &:hover {
+    background: #FBF02C;
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+  .title-container {
+    width: 100%;
+    max-width: 80%;
+    text-align: center; /* 👈 Centre le texte à l'intérieur */
+  }
+
+  .book-title {
+    position: static;
+    bottom: auto;
+    left: auto;
+    transform: none;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    color: #000000;
+    text-align: center; /* 👈 Centre le texte */
+    word-wrap: break-word;
+    line-height: 1.4;
+    display: block; /* 👈 Pour que text-align fonctionne */
+  }
+
+  .centered-image {
+    max-height: 60vh;
+  }
+}
