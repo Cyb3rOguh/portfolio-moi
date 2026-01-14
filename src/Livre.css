@@ -2,32 +2,47 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw; /* 👈 Force la largeur à 100% de la fenêtre */
+  width: 100vw;
   max-width: 1100px;
   height: 80vh;
   max-height: 800px;
-  /*border: #9ab414 2px solid;*/
-  
-  box-sizing: border-box; /* 👈 Déjà présent — bon */
-  position: relative;
-  padding: 0; /* 👈 Supprimez le padding pour éviter les débordements */
-  margin: 0; /* 👈 Ajoutez ceci pour éviter les marges externes */
+  box-sizing: border-box;
+  position: relative; /* 👈 Nécessaire pour le position: absolute du bouton */
+  padding: 0;
+  margin: 0;
 }
 
 .centered-image {
   max-width: 100%;
   max-height: 95vh;
   object-fit: contain;
+  transition: transform 0.3s ease;
 }
 
+.centered-image:hover {
+  transform: scale(1.02);
+}
 
+.book-title {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.2rem;
+  color: #000000;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  word-wrap: break-word;
+  line-height: 1.4;
+}
 
 .buy-button {
-  position: fixed;
-  right: 24px;
-  bottom: 24px;
+  position: absolute; /* 👈 Pas fixed — par rapport au conteneur */
+  right: 24px; /* 👈 Distance du bord droit du conteneur */
+  top: 50%; /* 👈 Centré verticalement dans le conteneur */
+  transform: translateY(-50%); /* 👈 Ajuste le centre */
   z-index: 10;
-  top: 50%;
   max-width: 300px;
 
   display: flex;
@@ -52,22 +67,8 @@
   background: #FBF02C;
 }
 
-.book-title {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 1.2rem;
-  color: #000000;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-  word-wrap: break-word;
-  line-height: 1.4;
-}
-
 /* 👇 Sur petits écrans : placer le bouton sous l'image et centrer le titre */
-@media (max-width: 904px) {
+@media (max-width: 934px) {
   .livre-container {
     flex-direction: column;
     justify-content: center;
