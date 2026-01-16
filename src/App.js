@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import Musique from "./musique.tsx";
 import Video from "./video.tsx";
 import Livre from "./livre.tsx";
@@ -15,16 +16,30 @@ function App() {
   const [preloadedSides, setPreloadedSides] = useState({
     musique: true,
     video: false,
-    livre: false, 
+    livre: false,
   });
 
   // Preload the inactive side after initial render
   useEffect(() => {
     const timer = setTimeout(() => {
-      setPreloadedSides({ musique: true, video: true, livre: true }); // 👈 Préchargez tout
+      setPreloadedSides({ musique: true, video: true, livre: true });
     }, 1000);
     return () => clearTimeout(timer);
   }, []);
+
+  // 👇 Utiliser useLocation pour détecter l'URL
+  const location = useLocation();
+
+  // 👇 Mettre à jour activeSide selon l'URL
+  useEffect(() => {
+    if (location.pathname === "/taper") {
+      setActiveSide("livre");
+    } else if (location.pathname === "/video") {
+      setActiveSide("video");
+    } else {
+      setActiveSide("musique");
+    }
+  }, [location.pathname]);
 
   const handleToggle = (newSide) => {
     if (newSide !== activeSide) {
@@ -54,7 +69,7 @@ function App() {
         >
           {activeSide === "musique" && <Musique setEmblaApi={setMusiqueEmblaApi} />}
           {activeSide === "video" && <Video setEmblaApi={setVideoEmblaApi} />}
-          {activeSide === "livre" && <Livre />} {/* 👈 Affichez Livre ici */}
+          {activeSide === "livre" && <Livre />}
         </div>
 
         {/* Preloaded content (hidden) */}
@@ -66,7 +81,7 @@ function App() {
             <Video setEmblaApi={() => {}} />
           )}
           {preloadedSides.livre && activeSide !== "livre" && (
-            <Livre /> // 👈 Préchargez Livre ici
+            <Livre />
           )}
         </div>
       </div>
@@ -80,8 +95,6 @@ function App() {
             onClick={() => {
               if (activeSide === "musique") musiqueEmblaApi?.scrollPrev();
               else if (activeSide === "video") videoEmblaApi?.scrollPrev();
-              // 👇 Ajoutez cette ligne pour Livre (si vous avez un Embla dedans)
-              // else if (activeSide === "livre") livreEmblaApi?.scrollPrev();
             }}
           >
             <img
@@ -107,8 +120,6 @@ function App() {
             onClick={() => {
               if (activeSide === "musique") musiqueEmblaApi?.scrollNext();
               else if (activeSide === "video") videoEmblaApi?.scrollNext();
-              // 👇 Ajoutez cette ligne pour Livre (si vous avez un Embla dedans)
-              // else if (activeSide === "livre") livreEmblaApi?.scrollNext();
             }}
           >
             <img
@@ -123,4 +134,13 @@ function App() {
   );
 }
 
-export default App;
+// 👇 Envelopper App avec Router
+function AppWithRouter() {
+  return (
+    <Router>
+      <App />
+    </Router>
+  );
+}
+
+export default AppWithRouter;
