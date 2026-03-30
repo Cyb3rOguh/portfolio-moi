@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useLocation, useNavigate } from "react-router-dom";
 import Musique from "./musique.tsx";
 import Video from "./video.tsx";
 import Livre from "./livre.tsx";
@@ -8,7 +8,6 @@ import ToggleSwitch from "./ToggleSwitch";
 import CustomCursor from "./CustomCursor";
 
 function App() {
-  const [activeSide, setActiveSide] = useState("musique");
   const [hoverToggle, setHoverToggle] = useState(false);
   const [musiqueEmblaApi, setMusiqueEmblaApi] = useState(null);
   const [videoEmblaApi, setVideoEmblaApi] = useState(null);
@@ -19,6 +18,17 @@ function App() {
     livre: false,
   });
 
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  // 👇 activeSide est déduit de l'URL (plus de conflit avec un état local)
+  const activeSide = useMemo(() => {
+    if (location.pathname === "/taper") return "livre";
+    if (location.pathname === "/musique") return "musique";
+    // Par défaut (racine "/" ou "/video"), on affiche la vidéo
+    return "video";
+  }, [location.pathname]);
+
   // Preload the inactive side after initial render
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -27,25 +37,22 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
 
-  // 👇 Utiliser useLocation pour détecter l'URL
-  const location = useLocation();
-
-  // 👇 Mettre à jour activeSide selon l'URL
-  useEffect(() => {
-    if (location.pathname === "/taper") {
-      setActiveSide("livre");
-    } else if (location.pathname === "/video") {
-      setActiveSide("video");
-    } else {
-      setActiveSide("musique");
-    }
-  }, [location.pathname]);
-
   const handleToggle = (newSide) => {
     if (newSide !== activeSide) {
       setIsTransitioning(true);
+      
+      // Définir le chemin en fonction de la section
+      let newPath = "/"; // Défaut = Vidéo
+      
+      if (newSide === "livre") {
+        newPath = "/taper";
+      } else if (newSide === "musique") {
+        newPath = "/musique";
+      }
+      // Si newSide === "video", newPath reste "/"
+
       setTimeout(() => {
-        setActiveSide(newSide);
+        navigate(newPath);
         setTimeout(() => setIsTransitioning(false), 50);
       }, 300);
     }
@@ -58,6 +65,7 @@ function App() {
         <h1>Hugo Borel</h1>
       </header>
       <CustomCursor hoverToggle={hoverToggle} />
+      
       {/*le big body*/}
       <div style={{ overflowX: "hidden", color: "white" }} className="App">
         {/* Active content */}
@@ -67,8 +75,8 @@ function App() {
             transition: "opacity 0.3s ease-in-out",
           }}
         >
-          {activeSide === "musique" && <Musique setEmblaApi={setMusiqueEmblaApi} />}
           {activeSide === "video" && <Video setEmblaApi={setVideoEmblaApi} />}
+          {activeSide === "musique" && <Musique setEmblaApi={setMusiqueEmblaApi} />}
           {activeSide === "livre" && <Livre />}
         </div>
 
@@ -85,6 +93,7 @@ function App() {
           )}
         </div>
       </div>
+
       {/*le menu*/}
       <footer className="footer">
         {/* 👇 Bouton "Précédent" — masqué sur "livre" */}
