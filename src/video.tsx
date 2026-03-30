@@ -5,6 +5,7 @@ import './video.css'; // Add custom styles for the carousel
 
 const slides = [
   { src: process.env.PUBLIC_URL + '/videos/babyloveme.mp4', title: 'Baby Love Me/animation/2026', url: "https://www.tiktok.com/@gaajuto/video/7598863762761731350" },
+  { src: process.env.PUBLIC_URL + '/videos/leclub.mp4', title: 'Générique "Le Club" RTS/animation/2026', url: "https://www.youtube.com/watch?v=m7pMyWg_-48" },
   { src: process.env.PUBLIC_URL + '/videos/chatskate.mp4', title: 'Le chat skateur/animation/2026', url: "https://www.tiktok.com/@gaajuto/video/7599215405219204355" },
   { src: process.env.PUBLIC_URL + '/videos/gagner.mp4', title: "gagner c'est bien perdre ca craint/Clip/2025", url: "https://youtu.be/Ac3oQSA2Gv0" },
   { src: process.env.PUBLIC_URL + '/videos/gentil.mp4', title: 'Studio Gentil/Dessin anime/2023', url: "https://www.instagram.com/p/Cg4jiuwjgiQ/" },
