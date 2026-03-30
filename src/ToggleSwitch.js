@@ -4,8 +4,8 @@ import PropTypes from "prop-types";
 
 const ToggleSwitch = ({ activeSide, setActiveSide, setHoverToggle }) => {
   const options = [
-    { value: "musique", label: "Musique", className: "toggle-button--musique" },
     { value: "video", label: "Vidéo", className: "toggle-button--video" },
+    { value: "musique", label: "Musique", className: "toggle-button--musique" },
     { value: "livre", label: "Livre", className: "toggle-button--livre" },
   ];
 

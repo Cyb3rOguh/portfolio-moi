@@ -1,0 +1,15 @@
+// Technique sticky pour rediriger sur la page du livre en utilisant l'erreur 404 pour rediriger sur Taper, si jamais tu peux supprimé ce fichier si tu veux plus ça.
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Page non trouvée</title>
+    <script>
+      // Redirige vers index.html pour que React Router gère la route
+      window.location.href = window.location.origin + window.location.pathname;
+    </script>
+  </head>
+  <body>
+    <p>Redirection en cours...</p>
+  </body>
+</html>

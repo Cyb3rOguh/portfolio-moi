@@ -4,10 +4,10 @@ import Autoplay from 'embla-carousel-autoplay';
 import './video.css'; // Add custom styles for the carousel
 
 const slides = [
+  { src: process.env.PUBLIC_URL + '/videos/babyloveme.mp4', title: 'Baby Love Me/animation', url: "https://www.tiktok.com/@gaajuto/video/7598863762761731350" },
   { src: process.env.PUBLIC_URL + '/videos/gagner.mp4', title: "gagner c'est bien perdre ca craint/Clip/2025", url: "https://youtu.be/Ac3oQSA2Gv0" },
   { src: process.env.PUBLIC_URL + '/videos/nouvellecouleur.mp4', title: 'nouvelle couleur/Clip/2025', url: "https://youtu.be/2PM2P4K1qBk?list=RD2PM2P4K1qBk" },
   { src: process.env.PUBLIC_URL + '/videos/oignon.mp4', title: 'le garcon oignon/Clip/2025', url: "https://youtu.be/yKNas4OvNgI" },
-  { src: process.env.PUBLIC_URL + '/videos/rodman.mp4', title: 'Rodman/Clip/2022', url: "https://youtu.be/iKLNpno3WVA" },
   { src: process.env.PUBLIC_URL + '/videos/gentil.mp4', title: 'Studio Gentil/Dessin anime/2023', url: "https://www.instagram.com/p/Cg4jiuwjgiQ/" },
 ];
 
